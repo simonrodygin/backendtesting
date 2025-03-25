@@ -7,12 +7,12 @@ from services.auth.models.login_request import LoginRequest
 from services.auth.models.login_success_response import LoginSuccessResponse
 
 class AuthService():
-    SERVICE_URL = 'http://127.0.0.1:8000'
+    SERVICE_URL = 'http://127.0.0.1:8000/'
     
-    def __init__(self, api_utils: SessionUtils):
-        self.api_utils = api_utils
-        self.auth_helper = AuthenticationHelper(api_utils)
-        self.user_helper = UserHelper(api_utils)
+    def __init__(self, session_utils: SessionUtils):
+        self.session_utils = session_utils
+        self.auth_helper = AuthenticationHelper(self.session_utils)
+        self.user_helper = UserHelper(self.session_utils)
 
     def register(self, data: RegisterRequest) -> RegisterSuccessResponse:
         response = self.auth_helper.post_register(data.model_dump())

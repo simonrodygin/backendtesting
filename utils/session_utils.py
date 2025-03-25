@@ -32,3 +32,8 @@ class SessionUtils:
     def post(self, endpoint, data = None, json = None, **kwargs):
         response = self.session.post(self.url + endpoint, data, json, **kwargs)
         return response
+    
+    @log_response
+    def delete(self, endpoint, **kwargs):
+        response = self.session.delete(self.url + endpoint, **kwargs)
+        return response
