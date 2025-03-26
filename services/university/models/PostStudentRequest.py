@@ -1,5 +1,5 @@
 from pydantic import BaseModel, ConfigDict
-from typing import Literal
+from services.university.models.degree import Degree
 
 class PostStudentRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -7,6 +7,6 @@ class PostStudentRequest(BaseModel):
     first_name: str
     last_name: str
     email: str
-    degree: Literal['Bachelor', 'Master', 'PhD']
+    degree: Degree
     phone: str
     group_id: int

@@ -1,6 +1,6 @@
 from utils.session_utils import SessionUtils
-from university.models import PostGroupRequest
-from university.models import PostGroupResponseSuccess
+from services.university.models import PostGroupRequest
+from services.university.models import PostGroupResponseSuccess
 
 class GroupHelper():
     ENDPOINT = "groups/"

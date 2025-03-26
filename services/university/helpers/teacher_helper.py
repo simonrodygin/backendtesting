@@ -1,6 +1,6 @@
 from utils.session_utils import SessionUtils
-from university.models import PostTeacherRequest
-from university.models import PostTeacherResponseSuccess
+from services.university.models import PostTeacherRequest
+from services.university.models import PostTeacherResponseSuccess
 
 class TeacherHelper():
     ENDPOINT = "teachers/"
