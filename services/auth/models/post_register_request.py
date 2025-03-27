@@ -5,5 +5,5 @@ class PostRegisterRequest(BaseModel):
     
     username: str
     password: str
-    repeat_password: str
+    password_repeat: str
     email: str

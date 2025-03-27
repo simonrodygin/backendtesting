@@ -17,7 +17,7 @@ class GroupHelper():
         return response
     
     def post_group(self, data: PostGroupRequest) -> PostGroupResponseSuccess:
-        response = self.session_utils.post(self.ENDPOINT, json=data)
+        response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     
     def delete_group(self, group_id: int):

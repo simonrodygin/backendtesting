@@ -15,6 +15,7 @@ import random
 from services.university.models.degree import Degree
 from typing import get_args
 from services.university.models.post_group_response_success import PostGroupResponseSuccess
+import pdb
 
 faker = Faker()
 

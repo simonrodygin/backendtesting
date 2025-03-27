@@ -17,7 +17,7 @@ class StudentHelper():
         return response
     
     def post_student(self, data: PostStudentRequest) -> PostStudentResponseSuccesss:
-        response = self.session_utils.post(self.ENDPOINT, json=data)
+        response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     
     def delete_student(self, student_id: int):

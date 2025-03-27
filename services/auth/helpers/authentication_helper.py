@@ -14,9 +14,9 @@ class AuthenticationHelper:
         self.session_utils = session_utils
 
     def post_register(self, data: PostRegisterRequest) -> PostRegisterSuccessResponse:
-        response = self.session_utils.post(self.REGISTER_ENDPOINT, json=data)
+        response = self.session_utils.post(self.REGISTER_ENDPOINT, data=data)
         return response
     
     def post_login(self, data: PostLoginRequest) -> PostLoginSuccessResponse:
-        response = self.session_utils.post(self.LOGIN_ENDPOINT, json=data)
+        response = self.session_utils.post(self.LOGIN_ENDPOINT, data=data)
         return response

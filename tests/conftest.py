@@ -18,10 +18,10 @@ def random_user_access_token(auth_session_utils_anon):
     auth_service = AuthService(auth_session_utils_anon)
     username = faker.user_name()
     password = faker.password(length=30, special_chars=True, digits=True, upper_case=True, lower_case=True)
-    repeat_password = password
+    password_repeat = password
     email = faker.email()
 
-    auth_service.register(data=PostRegisterRequest(username=username, password=password, repeat_password=repeat_password, email=email))
+    auth_service.register(data=PostRegisterRequest(username=username, password=password, password_repeat=password_repeat, email=email))
     response = auth_service.login(data=PostLoginRequest(username=username, password=password))
     return response.access_token
 

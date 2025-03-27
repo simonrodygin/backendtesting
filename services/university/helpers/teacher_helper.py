@@ -17,7 +17,7 @@ class TeacherHelper():
         return response
     
     def post_teacher(self, data: PostTeacherRequest) -> PostTeacherResponseSuccess:
-        response = self.session_utils.post(self.ENDPOINT, json=data)
+        response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     
     def delete_teacher(self, teacher_id: int):

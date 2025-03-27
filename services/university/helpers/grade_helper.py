@@ -17,7 +17,7 @@ class GradeHelper():
         return response
     
     def post_grade(self, data: PostGradeRequest) -> PostGradeResponseSuccess:
-        response = self.session_utils.post(self.ENDPOINT, json=data)
+        response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     
     def delete_grade(self, grade_id: int):
