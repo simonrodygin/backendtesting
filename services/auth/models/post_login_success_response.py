@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 
-class RegisterSuccessResponse(BaseModel):
+class PostLoginSuccessResponse(BaseModel):
     model_config = ConfigDict(extra="forbid")
     
-    detail: str
+    access_token: str
+    token_type: str

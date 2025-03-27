@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 
-class PostGroupRequest(BaseModel):
+class PostTeacherRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     
     first_name: str

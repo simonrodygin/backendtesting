@@ -1,6 +1,6 @@
 from utils.session_utils import SessionUtils
-from services.university.models import PostGradeRequest
-from services.university.models import PostGradeResponseSuccess
+from services.university.models.post_grade_request import PostGradeRequest
+from services.university.models.post_grade_response_success import PostGradeResponseSuccess
 
 class GradeHelper():
     ENDPOINT = "grades/"

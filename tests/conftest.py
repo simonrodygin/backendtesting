@@ -2,8 +2,8 @@ import pytest
 from services.auth.auth_service import AuthService
 from utils.session_utils import SessionUtils
 from faker import Faker
-from services.auth.models.register_request import RegisterRequest
-from services.auth.models.login_request import LoginRequest
+from services.auth.models.post_register_request import PostRegisterRequest
+from services.auth.models.post_login_request import PostLoginRequest
 from services.university.uni_service import UniService
 
 faker = Faker()
@@ -21,8 +21,8 @@ def random_user_access_token(auth_session_utils_anon):
     repeat_password = password
     email = faker.email()
 
-    auth_service.register(data=RegisterRequest(username=username, password=password, repeat_password=repeat_password, email=email))
-    response = auth_service.login(data=LoginRequest(username=username, password=password))
+    auth_service.register(data=PostRegisterRequest(username=username, password=password, repeat_password=repeat_password, email=email))
+    response = auth_service.login(data=PostLoginRequest(username=username, password=password))
     return response.access_token
 
 @pytest.fixture(scope='function', autouse=False)

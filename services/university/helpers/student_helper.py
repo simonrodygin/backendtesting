@@ -1,6 +1,6 @@
 from utils.session_utils import SessionUtils
-from services.university.models import PostStudentRequest
-from services.university.models import PostStudentResponseSuccess
+from services.university.models.post_student_request import PostStudentRequest
+from services.university.models.post_student_response_success import PostStudentResponseSuccesss
 
 class StudentHelper():
     ENDPOINT = "students/"
@@ -16,7 +16,7 @@ class StudentHelper():
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def post_student(self, data: PostStudentRequest) -> PostStudentResponseSuccess:
+    def post_student(self, data: PostStudentRequest) -> PostStudentResponseSuccesss:
         response = self.session_utils.post(self.ENDPOINT, json=data)
         return response
     

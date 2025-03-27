@@ -3,14 +3,18 @@ from services.university.helpers.student_helper import StudentHelper
 from services.university.helpers.group_helper import GroupHelper
 from services.university.helpers.teacher_helper import TeacherHelper
 from services.university.helpers.grade_helper import GradeHelper
-from services.university.models import PostStudentRequest
-from services.university.models import PostGroupRequest
-from services.university.models import PostTeacherRequest
-from services.university.models import PostGradeRequest
+from services.university.models.post_student_request import PostStudentRequest
+from services.university.models.post_student_response_success import PostStudentResponseSuccesss
+from services.university.models.post_group_request import PostGroupRequest
+from services.university.models.post_teacher_request import PostTeacherRequest
+from services.university.models.post_grade_request import PostGradeRequest
+from services.university.models.post_grade_response_success import PostGradeResponseSuccess
+from services.university.models.post_teacher_response_success import PostTeacherResponseSuccess
 from faker import Faker
 import random
 from services.university.models.degree import Degree
 from typing import get_args
+from services.university.models.post_group_response_success import PostGroupResponseSuccess
 
 faker = Faker()
 
@@ -28,15 +32,16 @@ class UniService():
     def make_random_group(self):
         group_data = PostGroupRequest(name=faker.word())
         response = self.group_helper.post_group(data=group_data.model_dump())
-        return response
+        return PostGroupResponseSuccess(**response.json())
 
     def make_random_teacher(self):
         teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=faker.word())
         response = self.teacher_helper.post_teacher(data=teacher_data.model_dump())
-        return response
+        return PostTeacherResponseSuccess(**response.json())
     
     def make_random_student(self):
-        groups_amount = len(self.group_helper.get_groups_list())
+        
+        groups_amount = len(self.group_helper.get_groups_list().json())
         if groups_amount == 0:
             self.make_random_group()
         
@@ -50,7 +55,7 @@ class UniService():
         )
 
         response = self.student_helper.post_student(data=student_data.model_dump())
-        return response
+        return PostStudentResponseSuccesss(**response.json())
     
     def make_grade(self, student_id: int, teacher_id: int, grade: int):
         grade_data = PostGradeRequest(
@@ -59,14 +64,14 @@ class UniService():
             grade=grade
         )
         response = self.grade_helper.post_grade(data=grade_data.model_dump())
-        return response
+        return PostGradeResponseSuccess(**response.json())
     
     def clean(self):
-        for i in range(len(self.group_helper.get_groups_list())):
+        for i in range(len(self.group_helper.get_groups_list().json())):
             self.group_helper.delete_group(i + 1)
-        for i in range(len(self.teacher_helper.get_teachers_list())):
+        for i in range(len(self.teacher_helper.get_teachers_list().json())):
             self.teacher_helper.delete_teacher(i + 1)
-        for i in range(len(self.student_helper.get_students_list())):
+        for i in range(len(self.student_helper.get_students_list().json())):
             self.student_helper.delete_student(i + 1)
-        for i in range(len(self.grade_helper.get_grades_list())):
+        for i in range(len(self.grade_helper.get_grades_list().json())):
             self.grade_helper.delete_grade(i + 1)
