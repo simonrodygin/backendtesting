@@ -1,7 +1,7 @@
-from pydantic import BaseModel, ConfigDict
-from typing import Literal
+from enum import StrEnum
 
-class Degree(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    
-    degree: Literal['Bachelor', 'Master', 'PhD']
+class Degree(StrEnum):
+    Bachelor = "Bachelor"
+    Master = "Master"
+    Doctorate = "Doctorate"
+    Associate = "Associate"

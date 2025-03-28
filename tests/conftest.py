@@ -36,3 +36,8 @@ def uni_session_utils_anon(random_user_access_token):
 def uni_service(uni_session_utils_anon):
     uni_service = UniService(uni_session_utils_anon)
     return uni_service
+
+@pytest.fixture(scope='function')
+def clean_uni(uni_service):
+    yield
+    uni_service.clean()

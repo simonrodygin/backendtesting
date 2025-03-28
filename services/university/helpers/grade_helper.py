@@ -12,7 +12,7 @@ class GradeHelper():
         response = self.session_utils.get(self.ENDPOINT + f"{grade_id}/")
         return response
     
-    def get_grades_list(self):
+    def get_grades(self):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     

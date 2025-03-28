@@ -1,4 +1,4 @@
-from services.university.models.post_group_request import PostGroupRequest
+from services.university.models.post_teacher_request import PostTeacherRequest
 
-class PostTeacherResponseSuccess(PostGroupRequest):
+class PostTeacherResponseSuccess(PostTeacherRequest):
     id: int

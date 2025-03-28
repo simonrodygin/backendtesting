@@ -1,20 +1,23 @@
 import random
+import pdb
 
-def test_grades_list(uni_service):
+def test_grades_list(uni_service, clean_uni):
     grades = []
+    student_ids = []
+    teacher_ids = []
     for _ in range(3):
         student = uni_service.make_random_student()
         teacher = uni_service.make_random_teacher()
-        grade = random.randint(1, 10)
+        grade = random.randint(0, 5)
+        uni_service.make_grade(student_id=student.id, teacher_id=teacher.id, grade=grade)
         grades.append(grade)
-        uni_service.make_grade(student_id=student['id'], teacher_id=teacher['id'], grade=grade)
-    
-    grades = uni_service.grade_helper.get_grades_list()
-    assert len(grades) == 3
-    for i in range(3):
-        assert grades[i]['student_id'] == i + 1
-        assert grades[i]['teacher_id'] == i + 1
-        assert grades[i]['grade'] == grades[i]
-        assert grades[i]['id'] == i + 1
+        student_ids.append(student.id)
+        teacher_ids.append(teacher.id)
 
-    uni_service.clean()
+    
+    grades_data = uni_service.get_grades_list()
+    assert len(grades_data) == 3
+    for i in range(3):
+        assert grades_data[i]['student_id'] == student_ids[i]
+        assert grades_data[i]['teacher_id'] == teacher_ids[i]
+        assert grades_data[i]['grade'] == grades[i]

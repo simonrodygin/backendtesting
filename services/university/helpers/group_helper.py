@@ -12,7 +12,7 @@ class GroupHelper():
         response = self.session_utils.get(self.ENDPOINT + f"{group_id}/")
         return response
     
-    def get_groups_list(self):
+    def get_groups(self):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     

@@ -13,9 +13,10 @@ from services.university.models.post_teacher_response_success import PostTeacher
 from faker import Faker
 import random
 from services.university.models.degree import Degree
-from typing import get_args
+from services.university.models.subject import Subject
 from services.university.models.post_group_response_success import PostGroupResponseSuccess
 import pdb
+import string
 
 faker = Faker()
 
@@ -32,30 +33,27 @@ class UniService():
 
     def make_random_group(self):
         group_data = PostGroupRequest(name=faker.word())
-        response = self.group_helper.post_group(data=group_data.model_dump())
+        response = self.group_helper.post_group(data=group_data.json())
         return PostGroupResponseSuccess(**response.json())
 
     def make_random_teacher(self):
-        teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=faker.word())
-        response = self.teacher_helper.post_teacher(data=teacher_data.model_dump())
+        teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=random.choice(list(Subject)))
+        response = self.teacher_helper.post_teacher(data=teacher_data.json())
         return PostTeacherResponseSuccess(**response.json())
     
-    def make_random_student(self):
-        
-        groups_amount = len(self.group_helper.get_groups_list().json())
-        if groups_amount == 0:
-            self.make_random_group()
-        
+    def make_random_student(self):      
+        group = self.make_random_group()
+    
         student_data = PostStudentRequest(
             first_name=faker.name(),
             last_name=faker.name(),
-            group_id=random.randint(1, groups_amount),
+            group_id=group.id,
             email=faker.email(),
-            phone=faker.phone_number(),
-            degree=Degree(degree=random.choice(get_args(Degree.degree)))
+            phone='+7' + ''.join(random.choices(string.digits, k=7)),
+            degree=random.choice(list(Degree))
         )
 
-        response = self.student_helper.post_student(data=student_data.model_dump())
+        response = self.student_helper.post_student(data=student_data.json())
         return PostStudentResponseSuccesss(**response.json())
     
     def make_grade(self, student_id: int, teacher_id: int, grade: int):
@@ -64,15 +62,34 @@ class UniService():
             teacher_id=teacher_id,
             grade=grade
         )
-        response = self.grade_helper.post_grade(data=grade_data.model_dump())
+        response = self.grade_helper.post_grade(data=grade_data.dict())
         return PostGradeResponseSuccess(**response.json())
     
     def clean(self):
-        for i in range(len(self.group_helper.get_groups_list().json())):
-            self.group_helper.delete_group(i + 1)
-        for i in range(len(self.teacher_helper.get_teachers_list().json())):
-            self.teacher_helper.delete_teacher(i + 1)
-        for i in range(len(self.student_helper.get_students_list().json())):
-            self.student_helper.delete_student(i + 1)
-        for i in range(len(self.grade_helper.get_grades_list().json())):
-            self.grade_helper.delete_grade(i + 1)
+        if len(self.get_groups_list()) != 0:
+            for group in self.get_groups_list():
+                self.group_helper.delete_group(group['id'])    
+        
+        if len(self.get_teachers_list()) != 0:
+            for teacher in self.get_teachers_list():
+                self.teacher_helper.delete_teacher(teacher['id'])
+
+        if len(self.get_students_list()) != 0:
+            for student in self.get_students_list():
+                self.student_helper.delete_student(student['id'])
+        
+        if len(self.get_grades_list()) != 0:
+            for grade in self.get_grades_list():
+                self.grade_helper.delete_grade(grade['id'])
+
+    def get_grades_list(self) -> list:
+        return self.grade_helper.get_grades().json()
+    
+    def get_students_list(self) -> list:
+        return self.student_helper.get_students().json()
+    
+    def get_teachers_list(self) -> list:
+        return self.teacher_helper.get_teachers().json()
+    
+    def get_groups_list(self) -> list:
+        return self.group_helper.get_groups().json()

@@ -12,7 +12,7 @@ class TeacherHelper():
         response = self.session_utils.get(self.ENDPOINT + f"{teacher_id}/")
         return response
     
-    def get_teachers_list(self):
+    def get_teachers(self):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
