@@ -83,13 +83,33 @@ class UniService():
                 self.grade_helper.delete_grade(grade['id'])
 
     def get_grades_list(self) -> list:
-        return self.grade_helper.get_grades().json()
+        try:
+            list(self.grade_helper.get_grades().json())
+        except TypeError:
+            return []
+
+        return list(self.grade_helper.get_grades().json())
     
     def get_students_list(self) -> list:
-        return self.student_helper.get_students().json()
+        try:
+            list(self.student_helper.get_students().json())
+        except TypeError:
+            return []
+        
+        return list(self.student_helper.get_students().json())
     
     def get_teachers_list(self) -> list:
-        return self.teacher_helper.get_teachers().json()
+        try:
+            list(self.teacher_helper.get_teachers().json())
+        except TypeError:
+            return []
+        
+        return list(self.teacher_helper.get_teachers().json())
     
     def get_groups_list(self) -> list:
-        return self.group_helper.get_groups().json()
+        try:
+            list(self.group_helper.get_groups().json())
+        except TypeError:
+            return []
+        
+        return list(self.group_helper.get_groups().json())
