@@ -33,8 +33,20 @@ def uni_session_utils_anon(random_user_access_token):
     return session_utils
 
 @pytest.fixture(scope='function', autouse=False)
+def uni_session_wrong_creds():
+    session_utils = SessionUtils(UniService.SERVICE_URL, headers={
+        'Authorization': f'Bearer wrong'
+    })
+    return session_utils
+
+@pytest.fixture(scope='function', autouse=False)
 def uni_service(uni_session_utils_anon):
     uni_service = UniService(uni_session_utils_anon)
+    return uni_service
+
+@pytest.fixture(scope='function', autouse=False)
+def uni_service_wrong_creds(uni_session_wrong_creds):
+    uni_service = UniService(uni_session_wrong_creds)
     return uni_service
 
 @pytest.fixture(scope='function')

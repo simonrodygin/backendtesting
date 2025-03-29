@@ -18,6 +18,6 @@ def test_grades_list(uni_service, clean_uni):
     grades_data = uni_service.get_grades_list()
     assert len(grades_data) == 3
     for i in range(3):
-        assert grades_data[i]['student_id'] == student_ids[i]
-        assert grades_data[i]['teacher_id'] == teacher_ids[i]
-        assert grades_data[i]['grade'] == grades[i]
+        assert grades_data[i]['student_id'] == student_ids[i], f"Expected {student_ids[i]}, got {grades_data[i]['student_id']}"
+        assert grades_data[i]['teacher_id'] == teacher_ids[i], f"Expected {teacher_ids[i]}, got {grades_data[i]['teacher_id']}"
+        assert grades_data[i]['grade'] == grades[i], f"Expected {grades[i]}, got {grades_data[i]['grade']}"
