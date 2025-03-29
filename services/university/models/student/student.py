@@ -1,9 +1,7 @@
-from pydantic import BaseModel, ConfigDict
+from services.general.models.standart import Standart
 from services.university.models.degree import Degree
 
-class PostStudentRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
+class Student(Standart):   
     first_name: str
     last_name: str
     email: str

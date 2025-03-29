@@ -1,12 +1,10 @@
 from utils.session_utils import SessionUtils
-from services.university.models.post_group_request import PostGroupRequest
-from services.university.models.post_group_response_success import PostGroupResponseSuccess
+from services.university.models.group.post_group_request import PostGroupRequest
+from services.university.models.group.post_group_response_success import PostGroupResponseSuccess
+from services.general.helpers.base_helper import BaseHelper
 
-class GroupHelper():
+class GroupHelper(BaseHelper):
     ENDPOINT = "groups/"
-    
-    def __init__(self, session_utils: SessionUtils):
-        self.session_utils = session_utils
 
     def get_group(self, group_id: int):
         response = self.session_utils.get(self.ENDPOINT + f"{group_id}/")

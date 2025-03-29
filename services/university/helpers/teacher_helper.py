@@ -1,12 +1,10 @@
 from utils.session_utils import SessionUtils
-from services.university.models.post_teacher_request import PostTeacherRequest
-from services.university.models.post_teacher_response_success import PostTeacherResponseSuccess
+from services.university.models.teacher.post_teacher_request import PostTeacherRequest
+from services.university.models.teacher.post_teacher_response_success import PostTeacherResponseSuccess
+from services.general.helpers.base_helper import BaseHelper
 
-class TeacherHelper():
+class TeacherHelper(BaseHelper):
     ENDPOINT = "teachers/"
-    
-    def __init__(self, session_utils: SessionUtils):
-        self.session_utils = session_utils
 
     def get_teacher(self, teacher_id: int):
         response = self.session_utils.get(self.ENDPOINT + f"{teacher_id}/")

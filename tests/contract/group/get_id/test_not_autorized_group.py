@@ -1,4 +1,4 @@
-from services.university.models.get_group_fail import GetGroupFail
+from services.university.models.group.get_group_fail import GetGroupFail
 
 def test_not_autorized_group(uni_service_wrong_creds):
     response = uni_service_wrong_creds.group_helper.get_group(1)

@@ -1,8 +1,7 @@
-from pydantic import BaseModel, ConfigDict, field_validator
+from pydantic import field_validator
+from services.general.models.standart import Standart
 
-class PostGradeRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    
+class Grade(Standart):   
     teacher_id: int
     student_id: int
     grade: int

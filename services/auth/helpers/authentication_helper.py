@@ -3,15 +3,13 @@ from services.auth.models.post_register_request import PostRegisterRequest
 from services.auth.models.post_register_success_response import PostRegisterSuccessResponse
 from services.auth.models.post_login_request import PostLoginRequest
 from services.auth.models.post_login_success_response import PostLoginSuccessResponse
+from services.general.helpers.base_helper import BaseHelper
 
 
-class AuthenticationHelper:
+class AuthenticationHelper(BaseHelper):
     ENDPOINT = "/auth"
     REGISTER_ENDPOINT = f"{ENDPOINT}/register/"
     LOGIN_ENDPOINT = f"{ENDPOINT}/login/"
-
-    def __init__(self, session_utils: SessionUtils):
-        self.session_utils = session_utils
 
     def post_register(self, data: PostRegisterRequest) -> PostRegisterSuccessResponse:
         response = self.session_utils.post(self.REGISTER_ENDPOINT, data=data)
