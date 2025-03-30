@@ -1,13 +1,16 @@
 import random
-import pdb
+from logger.logger import Logger
 
 def test_grades_list(uni_service, clean_uni):
     grades = []
     student_ids = []
     teacher_ids = []
-    for _ in range(3):
+    for i in range(3):
+        Logger.info(f"### Step 1.{i + 1}.1 Creating student {i}")
         student = uni_service.make_random_student()
+        Logger.info(f"### Step 1.{i + 1}.2 Creating teacher {i}")
         teacher = uni_service.make_random_teacher()
+        Logger.info(f"### Step 1.{i + 1}.3 Creating grade {i}")
         grade = random.randint(0, 5)
         uni_service.make_grade(student_id=student.id, teacher_id=teacher.id, grade=grade)
         grades.append(grade)
@@ -15,6 +18,7 @@ def test_grades_list(uni_service, clean_uni):
         teacher_ids.append(teacher.id)
 
     
+    Logger.info("### Step 2 Get all grades")
     grades_data = uni_service.get_grades_list()
     assert len(grades_data) == 3
     for i in range(3):

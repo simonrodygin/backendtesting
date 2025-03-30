@@ -15,8 +15,8 @@ import random
 from services.university.models.degree import Degree
 from services.university.models.subject import Subject
 from services.university.models.group.post_group_response_success import PostGroupResponseSuccess
-import pdb
 import string
+from logger.logger import Logger
 
 faker = Faker()
 
@@ -66,6 +66,7 @@ class UniService():
         return PostGradeResponseSuccess(**response.json())
     
     def clean(self):
+        Logger.info('### Cleaning all university data')
         if len(self.get_groups_list()) != 0:
             for group in self.get_groups_list():
                 self.group_helper.delete_group(group['id'])    
@@ -81,6 +82,7 @@ class UniService():
         if len(self.get_grades_list()) != 0:
             for grade in self.get_grades_list():
                 self.grade_helper.delete_grade(grade['id'])
+        Logger.info('### All university data clean')
 
     def get_grades_list(self) -> list:
         try:

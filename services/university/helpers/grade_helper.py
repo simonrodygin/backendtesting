@@ -1,6 +1,3 @@
-from utils.session_utils import SessionUtils
-from services.university.models.grade.post_grade_request import PostGradeRequest
-from services.university.models.grade.post_grade_response_success import PostGradeResponseSuccess
 from services.general.helpers.base_helper import BaseHelper
 
 class GradeHelper(BaseHelper):
@@ -14,7 +11,7 @@ class GradeHelper(BaseHelper):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def post_grade(self, data: PostGradeRequest) -> PostGradeResponseSuccess:
+    def post_grade(self, data):
         response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     

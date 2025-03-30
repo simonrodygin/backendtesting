@@ -1,6 +1,6 @@
 from services.university.models.group.get_group_success import GetGroupSuccess
 
-def test_group_search_success(uni_service, clean_uni):
+def test_search_success(uni_service, clean_uni):
     group = uni_service.make_random_group()
     
     response = uni_service.group_helper.get_group(group.id)

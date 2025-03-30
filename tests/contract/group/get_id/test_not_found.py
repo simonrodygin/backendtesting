@@ -1,6 +1,6 @@
 from services.university.models.group.get_group_fail import GetGroupFail
 
-def test_not_found_group(uni_service):
+def test_not_found(uni_service):
     response = uni_service.group_helper.get_group(1)
     response_data = response.json()
     response_model_obj = GetGroupFail.model_validate(response_data)

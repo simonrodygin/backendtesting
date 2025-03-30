@@ -1,6 +1,3 @@
-from utils.session_utils import SessionUtils
-from services.university.models.student.post_student_request import PostStudentRequest
-from services.university.models.student.post_student_response_success import PostStudentResponseSuccess
 from services.general.helpers.base_helper import BaseHelper
 
 class StudentHelper(BaseHelper):
@@ -14,7 +11,7 @@ class StudentHelper(BaseHelper):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def post_student(self, data: PostStudentRequest) -> PostStudentResponseSuccess:
+    def post_student(self, data):
         response = self.session_utils.post(self.ENDPOINT, data=data)
         return response
     
