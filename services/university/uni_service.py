@@ -5,7 +5,7 @@ from services.university.helpers.teacher_helper import TeacherHelper
 from services.university.helpers.grade_helper import GradeHelper
 from services.university.models.student.post_student_request import PostStudentRequest
 from services.university.models.student.post_student_response_success import PostStudentResponseSuccess
-from services.university.models.group.group import Group
+from services.university.models.group.post_group_request import PostGroupRequest
 from services.university.models.teacher.post_teacher_request import PostTeacherRequest
 from services.university.models.grade.post_grade_request import PostGradeRequest
 from services.university.models.grade.post_grade_response_success import PostGradeResponseSuccess
@@ -31,17 +31,17 @@ class UniService():
         self.teacher_helper = TeacherHelper(self.session_utils)
         self.grade_helper = GradeHelper(self.session_utils)
 
-    def make_random_group(self):
-        group_data = Group(name=faker.word())
+    def make_random_group(self) -> PostGroupResponseSuccess:
+        group_data = PostGroupRequest(name=faker.word())
         response = self.group_helper.post_group(data=group_data.json())
         return PostGroupResponseSuccess(**response.json())
 
-    def make_random_teacher(self):
+    def make_random_teacher(self) -> PostTeacherResponseSuccess:
         teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=random.choice(list(Subject)))
         response = self.teacher_helper.post_teacher(data=teacher_data.json())
         return PostTeacherResponseSuccess(**response.json())
     
-    def make_random_student(self):      
+    def make_random_student(self) -> PostStudentResponseSuccess:      
         group = self.make_random_group()
     
         student_data = PostStudentRequest(
@@ -56,13 +56,8 @@ class UniService():
         response = self.student_helper.post_student(data=student_data.json())
         return PostStudentResponseSuccess(**response.json())
     
-    def make_grade(self, student_id: int, teacher_id: int, grade: int):
-        grade_data = PostGradeRequest(
-            student_id=student_id,
-            teacher_id=teacher_id,
-            grade=grade
-        )
-        response = self.grade_helper.post_grade(data=grade_data.dict())
+    def make_grade(self, post_grade_request_data: PostGradeRequest) -> PostGradeResponseSuccess:
+        response = self.grade_helper.post_grade(data=post_grade_request_data.dict())
         return PostGradeResponseSuccess(**response.json())
     
     def clean_group(self):

@@ -1,5 +1,6 @@
 import random
 from logger.logger import Logger
+from services.university.models.grade.post_grade_request import PostGradeRequest
 
 def test_grades_list(uni_readiness_check, uni_service, clean_uni):
     grades = []
@@ -12,8 +13,13 @@ def test_grades_list(uni_readiness_check, uni_service, clean_uni):
         Logger.info(f"### Step 1.{i + 1}.2 Creating teacher {i}")
         teacher = uni_service.make_random_teacher()
         Logger.info(f"### Step 1.{i + 1}.3 Creating grade {i}")
-        grade = random.randint(0, 5)
-        uni_service.make_grade(student_id=student.id, teacher_id=teacher.id, grade=grade)
+        grade = random.randint(0, 5)  
+        make_grade_req_data = PostGradeRequest(
+            teacher_id = teacher.id,
+            student_id = student.id,
+            grade = grade
+        )
+        uni_service.make_grade(make_grade_req_data)
         grades.append(grade)
         student_ids.append(student.id)
         teacher_ids.append(teacher.id)
