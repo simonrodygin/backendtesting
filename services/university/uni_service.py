@@ -60,13 +60,22 @@ class UniService():
         response = self.grade_helper.post_grade(data=post_grade_request_data.dict())
         return PostGradeResponseSuccess(**response.json())
     
-    def make_random_grade(self):
-        student = self.make_random_student()
-        teacher = self.make_random_teacher()
+    def make_random_grade(self, teacher_id: int = None, student_id: int = None):
+        if student_id == None:
+            student = self.make_random_student()
+            s_id = student.id
+        else:
+            s_id = student_id
+
+        if teacher_id == None:
+            teacher = self.make_random_teacher()
+            t_id = teacher.id
+        else:
+            t_id = teacher_id
         grade = random.randint(0, 5)  
         make_grade_req_data = PostGradeRequest(
-            teacher_id = teacher.id,
-            student_id = student.id,
+            teacher_id = t_id,
+            student_id = s_id,
             grade = grade
         )
         response = self.make_grade(make_grade_req_data)

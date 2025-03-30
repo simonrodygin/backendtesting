@@ -9,8 +9,11 @@ class GradeHelper(BaseHelper):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def get_stats(self, search_by: Optional[Literal['group_id', 'student_id', 'teacher_id']], id: Optional[int]):
-        response = self.session_utils.get(self.STATS_ENDPOINT + f'?{search_by}={id}')
+    def get_stats(self, search_by: Literal['group_id', 'student_id', 'teacher_id'] = None, id: int = None):
+        if search_by == None or id == None:
+            response = self.session_utils.get(self.STATS_ENDPOINT)
+        else: 
+            response = self.session_utils.get(self.STATS_ENDPOINT + f'?{search_by}={id}')
         return response
 
     def post_grade(self, data):
