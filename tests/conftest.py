@@ -5,8 +5,12 @@ from faker import Faker
 from services.auth.models.post_register_request import PostRegisterRequest
 from services.auth.models.post_login_request import PostLoginRequest
 from services.university.uni_service import UniService
+import time
+from requests import request
+from utils.confiig_reader import ConfigReader
 
 faker = Faker()
+config_reader = ConfigReader()
 
 @pytest.fixture(scope='function', autouse=False)
 def auth_session_utils_anon():
@@ -59,12 +63,44 @@ def uni_service_wrong_creds(uni_session_wrong_creds):
     uni_service = UniService(uni_session_wrong_creds)
     return uni_service
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', autouse=False)
 def clean_uni(uni_service):
     yield
     uni_service.clean()
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', autouse=False)
 def clean_group_uni(uni_service):
     yield
     uni_service.clean_group()
+
+@pytest.fixture(scope='function', autouse=True)
+def auth_readiness_check():
+    timeout = config_reader.get_constant("standart_timeout")
+
+    start_time = time.time()
+    while time.time() < start_time + timeout:
+        try:
+            response = request('GET', AuthService.SERVICE_URL + '/docs')
+            response.raise_for_status()
+        except:
+            time.sleep(config_reader.get_constant("standart_poll_frequency"))
+        else:
+            break
+    else:
+        raise RuntimeError(f'Auth services did not started during {timeout} sec')
+    
+@pytest.fixture(scope='function', autouse=False)
+def uni_readiness_check():
+    timeout = config_reader.get_constant("standart_timeout")
+
+    start_time = time.time()
+    while time.time() < start_time + timeout:
+        try:
+            response = request('GET', UniService.SERVICE_URL + '/docs')
+            response.raise_for_status()
+        except:
+            time.sleep(config_reader.get_constant("standart_poll_frequency"))
+        else:
+            break
+    else:
+        raise RuntimeError(f'University services did not started during {timeout} sec')

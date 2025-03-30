@@ -2,7 +2,7 @@ from services.university.models.group.get_group_fail import GetGroupFail
 from services.university.models.group.get_group_success import GetGroupSuccess
 
 class TestContractgetByID:
-    def test_access_denied(self, uni_service_anon):
+    def test_access_denied(self, uni_readiness_check, uni_service_anon):
         response = uni_service_anon.group_helper.get_group(1)
         response_data = response.json()
         response_model_obj = GetGroupFail.model_validate(response_data)
