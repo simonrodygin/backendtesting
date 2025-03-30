@@ -65,6 +65,12 @@ class UniService():
         response = self.grade_helper.post_grade(data=grade_data.dict())
         return PostGradeResponseSuccess(**response.json())
     
+    def clean_group(self):
+        Logger.info('### Cleaning group university data')
+        if len(self.get_groups_list()) != 0:
+            for group in self.get_groups_list():
+                self.group_helper.delete_group(group['id'])   
+    
     def clean(self):
         Logger.info('### Cleaning all university data')
         if len(self.get_groups_list()) != 0:

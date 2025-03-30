@@ -23,7 +23,7 @@ class TestContractgetByID:
         assert response.status_code == 404, f"Expected status code 404, got {response.status_code}"
         assert response_model_obj.detail == "Group not found", f"Expected 'Group not found', got {response_model_obj.detail}"
     
-    def test_search_success(self, uni_service, clean_uni):
+    def test_search_success(self, uni_service, clean_group_uni):
         group = uni_service.make_random_group()
         
         response = uni_service.group_helper.get_group(group.id)

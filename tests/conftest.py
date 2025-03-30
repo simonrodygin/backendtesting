@@ -63,3 +63,8 @@ def uni_service_wrong_creds(uni_session_wrong_creds):
 def clean_uni(uni_service):
     yield
     uni_service.clean()
+
+@pytest.fixture(scope='function')
+def clean_group_uni(uni_service):
+    yield
+    uni_service.clean_group()
