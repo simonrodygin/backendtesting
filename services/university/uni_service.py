@@ -60,6 +60,18 @@ class UniService():
         response = self.grade_helper.post_grade(data=post_grade_request_data.dict())
         return PostGradeResponseSuccess(**response.json())
     
+    def make_random_grade(self):
+        student = self.make_random_student()
+        teacher = self.make_random_teacher()
+        grade = random.randint(0, 5)  
+        make_grade_req_data = PostGradeRequest(
+            teacher_id = teacher.id,
+            student_id = student.id,
+            grade = grade
+        )
+        response = self.make_grade(make_grade_req_data)
+        return response
+
     def clean_group(self):
         Logger.info('### Cleaning group university data')
         if len(self.get_groups_list()) != 0:
@@ -91,7 +103,7 @@ class UniService():
         except TypeError:
             return []
 
-        return list(self.grade_helper.get_grades().json())
+        return self.grade_helper.get_grades().json()
     
     def get_students_list(self) -> list:
         try:
@@ -99,15 +111,15 @@ class UniService():
         except TypeError:
             return []
         
-        return list(self.student_helper.get_students().json())
-    
+        return self.student_helper.get_students().json()
+
     def get_teachers_list(self) -> list:
         try:
             list(self.teacher_helper.get_teachers().json())
         except TypeError:
             return []
         
-        return list(self.teacher_helper.get_teachers().json())
+        return self.teacher_helper.get_teachers().json()
     
     def get_groups_list(self) -> list:
         try:
@@ -115,4 +127,4 @@ class UniService():
         except TypeError:
             return []
         
-        return list(self.group_helper.get_groups().json())
+        return self.group_helper.get_groups().json()
