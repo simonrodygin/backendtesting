@@ -8,7 +8,6 @@ import pytest
 faker = Faker()
 
 class TestGrades():
-    @pytest.mark.skip
     def test_grades_list(uni_readiness_check, uni_service, clean_uni):
         grades = []
         student_ids = []
@@ -32,7 +31,6 @@ class TestGrades():
             assert grades_data[i]['teacher_id'] == teacher_ids[i], f"Expected {teacher_ids[i]}, got {grades_data[i]['teacher_id']}"
             assert grades_data[i]['grade'] == grades[i], f"Expected {grades[i]}, got {grades_data[i]['grade']}"
 
-    @pytest.mark.skip
     def test_grades_stats_general(uni_readiness_check, uni_service, clean_uni):
         Logger.info("### Step 1 make entitites")
         grades_list = []
