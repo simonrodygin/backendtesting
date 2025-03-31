@@ -1,9 +1,9 @@
-from services.university.models.grade.grade import Grade
+from services.university.models.grade.base_grade import BaseGrade
 from pydantic import RootModel
 
 from typing import List
 
-class GradeRecord(Grade):
+class GradeRecord(BaseGrade):
     id: int
 
 class GetGradesResponseSuccess(RootModel):

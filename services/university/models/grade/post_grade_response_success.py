@@ -1,4 +1,4 @@
-from services.university.models.grade.grade import Grade
+from services.university.models.grade.base_grade import BaseGrade
 
-class PostGradeResponseSuccess(Grade):
+class PostGradeResponseSuccess(BaseGrade):
     id: int

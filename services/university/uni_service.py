@@ -13,7 +13,7 @@ from services.university.models.teacher.post_teacher_response_success import Pos
 from faker import Faker
 import random
 from services.university.models.degree_enum import DegreeEnum
-from services.university.models.subject import Subject
+from services.university.models.subject_enum import SubjectEnum
 from services.university.models.group.post_group_response_success import PostGroupResponseSuccess
 import string
 from logger.logger import Logger
@@ -40,7 +40,7 @@ class UniService():
         return PostGroupResponseSuccess(**response.json())
 
     def make_random_teacher(self) -> PostTeacherResponseSuccess:
-        teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=random.choice(list(Subject)))
+        teacher_data = PostTeacherRequest(first_name=faker.name(), last_name=faker.name(), subject=random.choice(list(SubjectEnum)))
         response = self.teacher_helper.post_teacher(data=teacher_data.json())
         return PostTeacherResponseSuccess(**response.json())
     

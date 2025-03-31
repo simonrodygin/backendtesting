@@ -1,4 +1,4 @@
-from services.university.models.group.group import Group
+from services.university.models.group.base_group import BaseGroup
 
-class PostGroupRequest(Group):   
+class PostGroupRequest(BaseGroup):   
     pass

@@ -1,4 +1,4 @@
-from services.university.models.teacher.teacher import Teacher
+from services.university.models.teacher.base_teacher import BaseTeacher
 
-class PostTeacherRequest(Teacher):  
+class PostTeacherRequest(BaseTeacher):  
     pass

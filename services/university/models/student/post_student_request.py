@@ -1,4 +1,4 @@
-from services.university.models.student.student import Student
+from services.university.models.student.base_student import BaseStudent
 
-class PostStudentRequest(Student):
+class PostStudentRequest(BaseStudent):
     pass

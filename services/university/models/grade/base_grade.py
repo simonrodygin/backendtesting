@@ -4,7 +4,7 @@ from utils.confiig_reader import ConfigReader
 
 config_reader = ConfigReader()
 
-class Grade(Standart):   
+class BaseGrade(Standart):   
     teacher_id: int
     student_id: int
     grade: int

@@ -1,4 +1,4 @@
-from services.university.models.student.student import Student
+from services.university.models.student.base_student import BaseStudent
 
-class PostStudentResponseSuccess(Student):
+class PostStudentResponseSuccess(BaseStudent):
     id: int
