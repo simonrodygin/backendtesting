@@ -13,12 +13,11 @@ class ConfigReader:
         ''' 
         Get config by specified path
         
-        Parameters: path (list[str]) - path to the file. Where the first elements of the list are closer to the root
+        Parameters: path - path to the file. Where the first elements of the list are closer to the root
         
         Returns: value by the specified key 
         
         '''
-        
         data = self.config
         for adress in path:
             data = data[adress]

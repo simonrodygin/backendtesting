@@ -18,6 +18,7 @@ from services.university.models.group.post_group_response_success import PostGro
 import string
 from logger.logger import Logger
 from utils.confiig_reader import ConfigReader
+import pdb
 
 faker = Faker()
 config_reader = ConfigReader()
@@ -85,57 +86,55 @@ class UniService():
 
     def clean_group(self):
         Logger.info('### Cleaning group university data')
-        if len(self.get_groups_list()) != 0:
+        if len(self.get_groups_list()) != 0 and self.get_groups_list() != None:
             for group in self.get_groups_list():
-                self.group_helper.delete_group(group['id'])   
-    
-    def clean(self):
-        Logger.info('### Cleaning all university data')
-        if len(self.get_groups_list()) != 0:
-            for group in self.get_groups_list():
-                self.group_helper.delete_group(group['id'])    
-        
-        if len(self.get_teachers_list()) != 0:
+                self.group_helper.delete_group(group['id'])
+
+    def clean_teacher(self):
+        Logger.info('### Cleaning teacher university data')
+        if len(self.get_teachers_list()) != 0 and self.get_teachers_list() != None:
             for teacher in self.get_teachers_list():
                 self.teacher_helper.delete_teacher(teacher['id'])
 
-        if len(self.get_students_list()) != 0:
+    def clean_student(self):
+        Logger.info('### Cleaning student university data')
+        if len(self.get_students_list()) != 0 and self.get_students_list() != None:
             for student in self.get_students_list():
                 self.student_helper.delete_student(student['id'])
-        
-        if len(self.get_grades_list()) != 0:
+
+    def clean_grades(self):
+        Logger.info('### Cleaning grades university data')
+        if len(self.get_grades_list()) != 0 and self.get_grades_list() != None:
             for grade in self.get_grades_list():
                 self.grade_helper.delete_grade(grade['id'])
-        Logger.info('### All university data clean')
+    
+    
+    def clean(self):   
+        self.clean_group()
+        self.clean_teacher()  
+        self.clean_student()
+        self.clean_grades()
 
     def get_grades_list(self) -> list:
         try:
-            list(self.grade_helper.get_grades().json())
+            return list(self.grade_helper.get_grades().json())
         except TypeError:
-            return []
-
-        return self.grade_helper.get_grades().json()
+            return None
     
     def get_students_list(self) -> list:
         try:
-            list(self.student_helper.get_students().json())
+            return list(self.student_helper.get_students().json())
         except TypeError:
-            return []
-        
-        return self.student_helper.get_students().json()
+            return None
 
     def get_teachers_list(self) -> list:
         try:
-            list(self.teacher_helper.get_teachers().json())
+            return list(self.teacher_helper.get_teachers().json())
         except TypeError:
-            return []
-        
-        return self.teacher_helper.get_teachers().json()
+            return None
     
     def get_groups_list(self) -> list:
         try:
-            list(self.group_helper.get_groups().json())
+            return list(self.group_helper.get_groups().json())
         except TypeError:
-            return []
-        
-        return self.group_helper.get_groups().json()
+            return None

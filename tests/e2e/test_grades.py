@@ -3,6 +3,8 @@ from logger.logger import Logger
 from services.university.models.grade.get_grades_response_success import GetGradesResponseSuccess
 from services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
 from faker import Faker
+import pytest
+import pdb
 
 faker = Faker()
 
@@ -19,8 +21,7 @@ class TestGrades():
             grades.append(grades_model_object.grade)
             student_ids.append(grades_model_object.student_id)
             teacher_ids.append(grades_model_object.teacher_id)
-
-        
+    
         Logger.info("### Step 2 Get all grades")
         grades_data = uni_service.get_grades_list()
         GetGradesResponseSuccess.model_validate(grades_data)
@@ -29,7 +30,7 @@ class TestGrades():
             assert grades_data[i]['student_id'] == student_ids[i], f"Expected {student_ids[i]}, got {grades_data[i]['student_id']}"
             assert grades_data[i]['teacher_id'] == teacher_ids[i], f"Expected {teacher_ids[i]}, got {grades_data[i]['teacher_id']}"
             assert grades_data[i]['grade'] == grades[i], f"Expected {grades[i]}, got {grades_data[i]['grade']}"
-
+    
     def test_grades_stats_general(uni_readiness_check, uni_service, clean_uni):
         Logger.info("### Step 1 make entitites")
         grades_list = []
@@ -45,7 +46,7 @@ class TestGrades():
         assert stats.max == max(grades_list), f"Max grade in stats is {stats.max} expected to be {max(grades_list)}"
         assert stats.avg == statistics.mean(grades_list), f"Avg grade in stats is {stats.avg} expected to be {statistics.mean(grades_list)}"
 
-
+    
     def test_grades_stats_by_teacher(uni_readiness_check, uni_service, clean_uni):
         Logger.info("### Step 1 make entitites")
         grades_list = []
