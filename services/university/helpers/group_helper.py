@@ -1,10 +1,12 @@
 from services.general.helpers.base_helper import BaseHelper
+from string import Template
 
 class GroupHelper(BaseHelper):
     ENDPOINT = "groups/"
+    ENDPOINT_WITH_ID = Template(f"{ENDPOINT}$ID")
 
     def get_group(self, group_id: int):
-        response = self.session_utils.get(self.ENDPOINT + f"{group_id}/")
+        response = self.session_utils.get(self.ENDPOINT_WITH_ID.substitute(ID=group_id))
         return response
     
     def get_groups(self):
@@ -16,5 +18,5 @@ class GroupHelper(BaseHelper):
         return response
     
     def delete_group(self, group_id: int):
-        response = self.session_utils.delete(self.ENDPOINT + f"{group_id}/")
+        response = self.session_utils.delete(self.ENDPOINT_WITH_ID.substitute(ID=group_id))
         return response

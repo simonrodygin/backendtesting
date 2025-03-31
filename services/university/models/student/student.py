@@ -1,10 +1,10 @@
 from services.general.models.standart import Standart
-from services.university.models.degree import Degree
+from services.university.models.degree_enum import DegreeEnum
 
 class Student(Standart):   
     first_name: str
     last_name: str
     email: str
-    degree: Degree
+    degree: DegreeEnum
     phone: str
     group_id: int

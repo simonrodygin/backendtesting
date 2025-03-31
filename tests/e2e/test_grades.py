@@ -3,7 +3,6 @@ from logger.logger import Logger
 from services.university.models.grade.get_grades_response_success import GetGradesResponseSuccess
 from services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
 from faker import Faker
-import pytest
 
 faker = Faker()
 
@@ -60,7 +59,7 @@ class TestGrades():
         grades_model_object = uni_service.make_random_grade()
 
         Logger.info('### Step 3 Get statistics')
-        stats = GetGradesStatsResponseSuccess.model_validate(uni_service.grade_helper.get_stats('teacher_id', teacher.id).json())
+        stats = GetGradesStatsResponseSuccess.model_validate(uni_service.grade_helper.get_stats({'teacher_id': teacher.id}).json())
         assert stats.count == test_entities, f"Count in stats is {stats.count} expected to be {test_entities}"
         assert stats.min == min(grades_list), f"Min grade in stats is {stats.min} expected to be {min(grades_list)}"
         assert stats.max == max(grades_list), f"Max grade in stats is {stats.max} expected to be {max(grades_list)}"

@@ -1,6 +1,6 @@
 from enum import StrEnum
 
-class Degree(StrEnum):
+class DegreeEnum(StrEnum):
     Bachelor = "Bachelor"
     Master = "Master"
     Doctorate = "Doctorate"

@@ -1,5 +1,8 @@
 from pydantic import field_validator
 from services.general.models.standart import Standart
+from utils.confiig_reader import ConfigReader
+
+config_reader = ConfigReader()
 
 class Grade(Standart):   
     teacher_id: int
@@ -8,6 +11,8 @@ class Grade(Standart):
     
     @field_validator("grade")
     def validate_grade(cls, value):
-        if value < 0 or value > 5:
-            raise ValueError("Grade must be between 0 and 5")
+        min = config_reader.get_constant('min_grade')
+        max = config_reader.get_constant('max_grade')
+        if value < min or value > max:
+            raise ValueError(f"Grade must be between {min} and {max}")
         return value

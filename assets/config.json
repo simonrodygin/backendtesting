@@ -1,6 +1,8 @@
 {
     "constants": {
         "standart_timeout": 100,
-        "standart_poll_frequency": 1
+        "standart_poll_frequency": 1,
+        "min_grade": 0,
+        "max_grade": 5
     }
 }

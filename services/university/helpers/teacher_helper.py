@@ -1,10 +1,12 @@
 from services.general.helpers.base_helper import BaseHelper
+from string import Template
 
 class TeacherHelper(BaseHelper):
     ENDPOINT = "teachers/"
+    ENDPOINT_WITH_ID = Template("{self.ENDPOINT}$ID/")
 
     def get_teacher(self, teacher_id: int):
-        response = self.session_utils.get(self.ENDPOINT + f"{teacher_id}/")
+        response = self.session_utils.get(self.ENDPOINT_WITH_ID.substitute(ID=teacher_id))
         return response
     
     def get_teachers(self):
@@ -16,5 +18,5 @@ class TeacherHelper(BaseHelper):
         return response
     
     def delete_teacher(self, teacher_id: int):
-        response = self.session_utils.delete(self.ENDPOINT + f"{teacher_id}/")
+        response = self.session_utils.delete(self.ENDPOINT_WITH_ID.substitute(ID=teacher_id))
         return response

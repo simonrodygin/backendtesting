@@ -12,13 +12,15 @@ from services.university.models.grade.post_grade_response_success import PostGra
 from services.university.models.teacher.post_teacher_response_success import PostTeacherResponseSuccess
 from faker import Faker
 import random
-from services.university.models.degree import Degree
+from services.university.models.degree_enum import DegreeEnum
 from services.university.models.subject import Subject
 from services.university.models.group.post_group_response_success import PostGroupResponseSuccess
 import string
 from logger.logger import Logger
+from utils.confiig_reader import ConfigReader
 
 faker = Faker()
+config_reader = ConfigReader()
 
 class UniService():
     SERVICE_URL = 'http://127.0.0.1:8001/'
@@ -50,7 +52,7 @@ class UniService():
             group_id=group.id,
             email=faker.email(),
             phone='+7' + ''.join(random.choices(string.digits, k=7)),
-            degree=random.choice(list(Degree))
+            degree=random.choice(list(DegreeEnum))
         )
 
         response = self.student_helper.post_student(data=student_data.json())
@@ -72,7 +74,7 @@ class UniService():
             t_id = teacher.id
         else:
             t_id = teacher_id
-        grade = random.randint(0, 5)  
+        grade = random.randint(config_reader.get_constant('min_grade'), config_reader.get_constant('max_grade'))  
         make_grade_req_data = PostGradeRequest(
             teacher_id = t_id,
             student_id = s_id,
