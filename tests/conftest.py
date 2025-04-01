@@ -6,8 +6,9 @@ from services.auth.models.post_register_request import PostRegisterRequest
 from services.auth.models.post_login_request import PostLoginRequest
 from services.university.uni_service import UniService
 import time
-from requests import request
+import requests
 from utils.confiig_reader import ConfigReader
+from logger.logger import Logger
 
 faker = Faker()
 config_reader = ConfigReader()
@@ -80,9 +81,10 @@ def auth_readiness_check():
     start_time = time.time()
     while time.time() < start_time + timeout:
         try:
-            response = request('GET', AuthService.SERVICE_URL + '/docs')
+            response = requests.request('GET', AuthService.SERVICE_URL + '/docs')
             response.raise_for_status()
-        except:
+        except (ConnectionError, requests.exceptions.Timeout) as e:
+            Logger.info(f"Connection error: {e}")
             time.sleep(config_reader.get_constant("standart_poll_frequency"))
         else:
             break
@@ -96,9 +98,10 @@ def uni_readiness_check():
     start_time = time.time()
     while time.time() < start_time + timeout:
         try:
-            response = request('GET', UniService.SERVICE_URL + '/docs')
+            response = requests.request('GET', UniService.SERVICE_URL + '/docs')
             response.raise_for_status()
-        except:
+        except (ConnectionError, requests.exceptions.Timeout) as e:
+            Logger.info(f"Connection error: {e}")
             time.sleep(config_reader.get_constant("standart_poll_frequency"))
         else:
             break

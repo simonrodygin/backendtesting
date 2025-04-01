@@ -1,7 +1,7 @@
-from services.general.models.standart import Standart
+from services.general.models.base_project import BaseProject
 from services.university.models.degree_enum import DegreeEnum
 
-class BaseStudent(Standart):   
+class BaseStudent(BaseProject):   
     first_name: str
     last_name: str
     email: str

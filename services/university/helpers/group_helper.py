@@ -2,8 +2,8 @@ from services.general.helpers.base_helper import BaseHelper
 from string import Template
 
 class GroupHelper(BaseHelper):
-    ENDPOINT = "groups/"
-    ENDPOINT_WITH_ID = Template(f"{ENDPOINT}$ID")
+    ENDPOINT = "groups"
+    ENDPOINT_WITH_ID = Template(f"{ENDPOINT}/$ID")
 
     def get_group(self, group_id: int):
         response = self.session_utils.get(self.ENDPOINT_WITH_ID.substitute(ID=group_id))

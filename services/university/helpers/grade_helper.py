@@ -1,21 +1,21 @@
 from services.general.helpers.base_helper import BaseHelper
-from typing import Literal, Dict
+from typing import Literal, Dict, Any
 from string import Template
 
 class GradeHelper(BaseHelper):
-    ENDPOINT = "grades/"
-    STATS_ENDPOINT = f"{ENDPOINT}stats/"
-    ENDPOINT_WITH_ID = Template("{self.ENDPOINT}$ID/")
-
+    ENDPOINT = "grades"
+    STATS_ENDPOINT = fr"{ENDPOINT}/stats/"
+    ENDPOINT_WITH_ID = Template("{self.ENDPOINT}/$ID/")
 
     def get_grades(self):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def get_stats(self, search_by_id: Dict[Literal['group_id', 'student_id', 'teacher_id'], int] = None):
+    def get_stats(self, search_by_id: Dict[Literal['group_id', 'student_id', 'teacher_id'], Any] = None):
         if search_by_id == None:
             response = self.session_utils.get(self.STATS_ENDPOINT)
         else: 
+            search_by_id = {key: value for key, value in search_by_id.items() if value is not None}
             response = self.session_utils.get(self.STATS_ENDPOINT, params=search_by_id)
         return response
 

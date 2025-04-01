@@ -1,16 +1,10 @@
 from services.university.models.grade.base_grade import BaseGrade
-from pydantic import RootModel
+from services.general.models.base_root import BaseRoot
 
 from typing import List
 
 class GradeRecord(BaseGrade):
     id: int
 
-class GetGradesResponseSuccess(RootModel):
+class GetGradesResponseSuccess(BaseRoot):
     root: List[GradeRecord]
-
-    def __iter__(self):
-        return iter(self.root)
-
-    def __getitem__(self, item):
-        return self.root[item]

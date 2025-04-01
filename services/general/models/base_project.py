@@ -1,4 +1,4 @@
 from pydantic import BaseModel, ConfigDict
 
-class Standart(BaseModel):
+class BaseProject(BaseModel):
     model_config = ConfigDict(extra="forbid")

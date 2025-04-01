@@ -1,10 +1,10 @@
 from pydantic import field_validator
-from services.general.models.standart import Standart
+from services.general.models.base_project import BaseProject
 from utils.confiig_reader import ConfigReader
 
 config_reader = ConfigReader()
 
-class BaseGrade(Standart):   
+class BaseGrade(BaseProject):   
     teacher_id: int
     student_id: int
     grade: int

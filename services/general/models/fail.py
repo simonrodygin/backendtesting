@@ -1,4 +1,4 @@
-from services.general.models.standart import Standart
+from services.general.models.base_project import BaseProject
 
-class Fail(Standart):
+class Fail(BaseProject):
     detail: str | list[dict]

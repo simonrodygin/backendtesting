@@ -1,7 +1,7 @@
-from services.general.models.standart import Standart
+from services.general.models.base_project import BaseProject
 
 
-class GetGradesStatsResponseSuccess(Standart):
+class GetGradesStatsResponseSuccess(BaseProject):
     count: int
     min: int | None
     max: int | None
