@@ -19,11 +19,12 @@ import string
 from logger.logger import Logger
 from utils.confiig_reader import ConfigReader
 import pdb
+from assets.constants import Constants
 
 faker = Faker()
 config_reader = ConfigReader()
 
-class UniService():
+class UniService:
     SERVICE_URL = 'http://127.0.0.1:8001/'
     
     def __init__(self, session_utils: SessionUtils):
@@ -75,7 +76,7 @@ class UniService():
             t_id = teacher.id
         else:
             t_id = teacher_id
-        grade = random.randint(config_reader.get_constant('min_grade'), config_reader.get_constant('max_grade'))  
+        grade = random.randint(Constants.MIN_GRADE, Constants.MAX_GRADE)  
         make_grade_req_data = PostGradeRequest(
             teacher_id = t_id,
             student_id = s_id,

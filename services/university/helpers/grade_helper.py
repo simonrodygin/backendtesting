@@ -11,8 +11,8 @@ class GradeHelper(BaseHelper):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def get_stats(self, search_by_id: Dict[Literal['group_id', 'student_id', 'teacher_id'], Any] = None):
-        if search_by_id == None:
+    def get_stats(self, search_by_id: Dict[Literal['group_id', 'student_id', 'teacher_id'], Any] | None = None):
+        if search_by_id is None:
             response = self.session_utils.get(self.STATS_ENDPOINT)
         else: 
             search_by_id = {key: value for key, value in search_by_id.items() if value is not None}
@@ -25,7 +25,6 @@ class GradeHelper(BaseHelper):
     
     def put_grade(self, data, grade_id: int):
         response = self.session_utils.put(self.ENDPOINT_WITH_ID.substitute(ID=grade_id), data=data)
-        #response = self.session_utils.put(self.ENDPOINT_WITH_ID.substitute(ID=grade_id), data=data)
         return response
     
     def delete_grade(self, grade_id: int):
