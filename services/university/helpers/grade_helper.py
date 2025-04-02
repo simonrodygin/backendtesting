@@ -11,11 +11,13 @@ class GradeHelper(BaseHelper):
         response = self.session_utils.get(self.ENDPOINT)
         return response
     
-    def get_stats(self, search_by_id: Dict[Literal['group_id', 'student_id', 'teacher_id'], Any] | None = None):
+    def get_stats(self, search_by_id = None):
         if search_by_id is None:
             response = self.session_utils.get(self.STATS_ENDPOINT)
-        else: 
+        elif isinstance(search_by_id, Dict[Literal['group_id', 'student_id', 'teacher_id'], Any]): 
             search_by_id = {key: value for key, value in search_by_id.items() if value is not None}
+            response = self.session_utils.get(self.STATS_ENDPOINT, params=search_by_id)
+        else:
             response = self.session_utils.get(self.STATS_ENDPOINT, params=search_by_id)
         return response
 
