@@ -1,0 +1,6 @@
+{
+    "constants": {
+        "standart_timeout": 100,
+        "standart_poll_frequency": 1
+    }
+}
