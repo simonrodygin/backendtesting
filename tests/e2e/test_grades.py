@@ -4,7 +4,6 @@ from services.university.models.grade.get_grades_response_success import GetGrad
 from services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
 from faker import Faker
 import pytest
-import pdb
 
 faker = Faker()
 

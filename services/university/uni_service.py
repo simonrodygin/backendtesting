@@ -18,7 +18,6 @@ from services.university.models.group.post_group_response_success import PostGro
 import string
 from logger.logger import Logger
 from utils.confiig_reader import ConfigReader
-import pdb
 from assets.constants import Constants
 
 faker = Faker()
