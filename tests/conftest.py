@@ -44,9 +44,7 @@ def uni_session_utils_anon():
 
 @pytest.fixture(scope='function', autouse=False)
 def uni_session_wrong_creds():
-    session_utils = SessionUtils(UniService.SERVICE_URL, headers={
-        'Authorization': f'Bearer wrong'
-    })
+    session_utils = SessionUtils(UniService.SERVICE_URL, headers={'Authorization': 'Bearer wrong'})
     return session_utils
 
 @pytest.fixture(scope='function', autouse=False)

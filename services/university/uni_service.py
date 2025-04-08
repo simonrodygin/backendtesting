@@ -64,13 +64,13 @@ class UniService:
         return PostGradeResponseSuccess(**response.json())
     
     def make_random_grade(self, teacher_id: int = None, student_id: int = None):
-        if student_id == None:
+        if student_id is None:
             student = self.make_random_student()
             s_id = student.id
         else:
             s_id = student_id
 
-        if teacher_id == None:
+        if teacher_id is None:
             teacher = self.make_random_teacher()
             t_id = teacher.id
         else:
@@ -86,25 +86,25 @@ class UniService:
 
     def clean_group(self):
         Logger.info('### Cleaning group university data')
-        if len(self.get_groups_list()) != 0 and self.get_groups_list() != None:
+        if len(self.get_groups_list()) != 0 and self.get_groups_list() is not None:
             for group in self.get_groups_list():
                 self.group_helper.delete_group(group['id'])
 
     def clean_teacher(self):
         Logger.info('### Cleaning teacher university data')
-        if len(self.get_teachers_list()) != 0 and self.get_teachers_list() != None:
+        if len(self.get_teachers_list()) != 0 and self.get_teachers_list() is not None:
             for teacher in self.get_teachers_list():
                 self.teacher_helper.delete_teacher(teacher['id'])
 
     def clean_student(self):
         Logger.info('### Cleaning student university data')
-        if len(self.get_students_list()) != 0 and self.get_students_list() != None:
+        if len(self.get_students_list()) != 0 and self.get_students_list() is not None:
             for student in self.get_students_list():
                 self.student_helper.delete_student(student['id'])
 
     def clean_grades(self):
         Logger.info('### Cleaning grades university data')
-        if len(self.get_grades_list()) != 0 and self.get_grades_list() != None:
+        if len(self.get_grades_list()) != 0 and self.get_grades_list() is not None:
             for grade in self.get_grades_list():
                 self.grade_helper.delete_grade(grade['id'])
     

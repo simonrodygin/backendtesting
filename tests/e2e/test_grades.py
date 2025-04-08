@@ -78,7 +78,7 @@ class TestGrades():
         assert stats.max == max(grades_list), f"Max grade in stats is {stats.max} expected to be {max(grades_list)}"
     
     @pytest.mark.grades_stats_general
-    def test_grades_stats_general_max(self, uni_readiness_check, uni_service, clean_uni):   
+    def test_grades_stats_general_avg(self, uni_readiness_check, uni_service, clean_uni):   
         stats, grades_list = self.grades_stats_general(uni_service)
         assert stats.avg == statistics.mean(grades_list), f"Avg grade in stats is {stats.avg} expected to be {statistics.mean(grades_list)}"
     
