@@ -36,11 +36,11 @@ jobs:
 
       - name: Install dependencies for the test system
         run: |
-          docker-compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml build
 
       - name: Start test system with Docker Compose
         run: |
-          docker-compose -f docker-compose.yml up -d
+          docker compose -f docker-compose.yml up -d
 
       - name: Wait for the system to be ready
         run: |
