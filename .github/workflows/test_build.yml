@@ -1,99 +1,103 @@
 name: Test Workflow
-
-on:
-  workflow_dispatch:  
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install Python and Ruff
-        run: |
-          python -m pip install --upgrade pip
-          pip install ruff
-
-      - name: Run Ruff linter
-        run: |
-          ruff check .
-
-  setup_test_system:
-    runs-on: ubuntu-latest          
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v2
-      
-      - name: Install dependencies for the test system
-        run: |
+ 
+ on:
+   workflow_dispatch:  
+   push:
+     branches:
+       - main
+   pull_request:
+     branches:
+       - main
+ 
+ jobs:
+   lint:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+ 
+       - name: Install Python and Ruff
+         run: |
+           python -m pip install --upgrade pip
+           pip install ruff
+ 
+       - name: Run Ruff linter
+         run: |
+           ruff check .
+ 
+   setup_test_system:
+     runs-on: ubuntu-latest          
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+ 
+       - name: Set up Docker
+         uses: docker/setup-buildx-action@v2
+ 
+       - name: Install dependencies for the test system
+         run: |
            docker compose -f docker-compose.yml build
-
-      - name: Start test system with Docker Compose
-        run: |
-          docker compose up
-
-      - name: Save Docker Compose configuration as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: docker-compose-logs
-          path: ./docker-compose.yml
-
-  run_tests:
-    runs-on: ubuntu-latest
-    needs: setup_test_system
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-    
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v2
-
-      - name: Install dependencies for tests
-        run: |
-              python -m pip install --upgrade pip
-              pip install -r requirements.txt
-
-      - name: Run tests
-        run: |
-          python -m pytest --alluredir=allure-results
-
-      - name: Save Allure test results as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: ./allure-results
-
-  generate_allure_report:
-    runs-on: ubuntu-latest
-    needs: run_tests
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Allure CLI
-        run: |
-          wget https://github.com/allure-framework/allure2/releases/download/2.16.1/allure-2.16.1.zip
-          unzip allure-2.16.1.zip
-          sudo mv allure-2.16.1 /opt/allure
-          sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
-
-      - name: Generate Allure Report
-        run: |
-          allure generate ./allure-results --clean -o ./allure-report
-
-      - name: Deploy Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-report
-          publish_branch: gh-pages
+ 
+       - name: Start test system with Docker Compose
+         run: |
+           docker compose -f docker-compose.yml up -d
+ 
+       - name: Wait for the system to be ready
+         run: |
+           curl 'http://localhost:8000/docs' 
+ 
+       - name: Save Docker Compose configuration as artifact
+         uses: actions/upload-artifact@v4
+         with:
+           name: docker-compose-logs
+           path: ./docker-compose.yml
+ 
+   run_tests:
+     runs-on: ubuntu-latest
+     needs: setup_test_system
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+ 
+       - name: Set up Docker
+         uses: docker/setup-buildx-action@v2
+ 
+       - name: Install dependencies for tests
+         run: |
+               python -m pip install --upgrade pip
+               pip install -r requirements.txt
+ 
+       - name: Run tests
+         run: |
+           python -m pytest --alluredir=allure-results
+ 
+       - name: Save Allure test results as artifact
+         uses: actions/upload-artifact@v4
+         with:
+           name: allure-results
+           path: ./allure-results
+ 
+   generate_allure_report:
+     runs-on: ubuntu-latest
+     needs: run_tests
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v2
+ 
+       - name: Install Allure CLI
+         run: |
+           wget https://github.com/allure-framework/allure2/releases/download/2.16.1/allure-2.16.1.zip
+           unzip allure-2.16.1.zip
+           sudo mv allure-2.16.1 /opt/allure
+           sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
+ 
+       - name: Generate Allure Report
+         run: |
+           allure generate ./allure-results --clean -o ./allure-report
+ 
+       - name: Deploy Allure Report to GitHub Pages
+         uses: peaceiris/actions-gh-pages@v3
+         with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: ./allure-report
+           publish_branch: gh-pages
