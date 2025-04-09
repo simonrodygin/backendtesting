@@ -4,6 +4,7 @@ from services.university.models.grade.get_grades_response_success import GetGrad
 from services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
 from faker import Faker
 import pytest
+import pdb
 
 faker = Faker()
 
@@ -50,7 +51,6 @@ class TestGrades():
         for i in range(self.test_entities):
             assert grades_data[i]['grade'] == grades[i], f"Expected {grades[i]}, got {grades_data[i]['grade']}"
     
-    @pytest.mark.skip
     def grades_stats_general(self, uni_service):
         Logger.info("### Step 1 make entitites")
         grades_list = []
@@ -82,7 +82,6 @@ class TestGrades():
         stats, grades_list = self.grades_stats_general(uni_service)
         assert stats.avg == statistics.mean(grades_list), f"Avg grade in stats is {stats.avg} expected to be {statistics.mean(grades_list)}"
     
-    @pytest.mark.skip
     def grades_stats_by_teacher(self, uni_service):
         Logger.info("### Step 1 make entitites")
         grades_list = []
