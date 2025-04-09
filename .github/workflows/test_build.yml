@@ -33,7 +33,7 @@ jobs:
 
       - name: Start test system with Docker Compose
         run: |
-          docker compose up
+          docker compose -f docker-compose.yml up -d
 
       - name: Save Docker Compose configuration as artifact
         uses: actions/upload-artifact@v4
