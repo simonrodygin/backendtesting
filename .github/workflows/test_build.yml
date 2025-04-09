@@ -1,6 +1,6 @@
 name: Test Workflow
  
- on:
+on:
    workflow_dispatch:  
    push:
      branches:
@@ -9,7 +9,7 @@ name: Test Workflow
      branches:
        - main
  
- jobs:
+jobs:
    lint:
      runs-on: ubuntu-latest
      steps:
