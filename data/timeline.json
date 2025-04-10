@@ -2,18 +2,18 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "fv-az1914-625",
+    "name" : "fv-az797-978",
     "children" : [ {
-      "name" : "3996-MainThread",
+      "name" : "3990-MainThread",
       "children" : [ {
-        "name" : "test_grades_stats_by_teacher_min",
-        "uid" : "2a8d7d71ed025e38",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "name" : "test_grades_list_teacher_id",
+        "uid" : "a7b2bbd716e8c1d",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316342957,
-          "stop" : 1744316343731,
-          "duration" : 774
+          "start" : 1744317455473,
+          "stop" : 1744317456133,
+          "duration" : 660
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,251 +24,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_general_count",
-        "uid" : "506031bc30de211c",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "uid" : "505ad15847924bd1",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316329584,
-          "stop" : 1744316330252,
-          "duration" : 668
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_by_teacher_max",
-        "uid" : "da2e6949a6298dfd",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316346013,
-          "stop" : 1744316346788,
-          "duration" : 775
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_general_min",
-        "uid" : "1c1517f8f0beee4c",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316332061,
-          "stop" : 1744316332736,
-          "duration" : 675
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_general_avg",
-        "uid" : "442b94a7ac5cf94b",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316337161,
-          "stop" : 1744316337828,
-          "duration" : 667
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_by_teacher_avg",
-        "uid" : "e8f51d57acc51d0",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316349164,
-          "stop" : 1744316349935,
-          "duration" : 771
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_list_teacher_id",
-        "uid" : "fd9f2d5c84d03bff",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316325011,
-          "stop" : 1744316325677,
-          "duration" : 666
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_list_grade",
-        "uid" : "31dd4de7d6b6b207",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316327232,
-          "stop" : 1744316327897,
-          "duration" : 665
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_by_teacher_count",
-        "uid" : "3746b226c3153e78",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316339983,
-          "stop" : 1744316340757,
-          "duration" : 774
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_search_success_status_code",
-        "uid" : "85d2d896e7335dd",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316318119,
-          "stop" : 1744316318224,
-          "duration" : 105
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_not_autorized_response",
-        "uid" : "48bf4e519cc63873",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316316021,
-          "stop" : 1744316316068,
-          "duration" : 47
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_search_success_response_id",
-        "uid" : "58d06d62d02d39e3",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316319065,
-          "stop" : 1744316319168,
-          "duration" : 103
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_list_len",
-        "uid" : "f4c8ab7870d2c332",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316320933,
-          "stop" : 1744316321611,
-          "duration" : 678
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_grades_stats_general_max",
-        "uid" : "6da0462f474ee9cc",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316334552,
-          "stop" : 1744316335223,
-          "duration" : 671
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_not_found_status_code",
-        "uid" : "748dc2029eb639b8",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316316732,
-          "stop" : 1744316316803,
-          "duration" : 71
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_access_denied_status_code",
-        "uid" : "1546b8b171211ca7",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
-        "status" : "passed",
-        "time" : {
-          "start" : 1744316315863,
-          "stop" : 1744316315912,
-          "duration" : 49
+          "start" : 1744317460051,
+          "stop" : 1744317460714,
+          "duration" : 663
         },
         "flaky" : false,
         "newFailed" : false,
@@ -279,13 +41,30 @@
         "parameters" : [ ]
       }, {
         "name" : "test_search_success_response_name",
-        "uid" : "ddc8e05df10d3ba7",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "uid" : "7e10f36508f7107c",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316319998,
-          "stop" : 1744316320100,
-          "duration" : 102
+          "start" : 1744317450426,
+          "stop" : 1744317450529,
+          "duration" : 103
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_by_teacher_min",
+        "uid" : "9bb8697817ace82d",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317473356,
+          "stop" : 1744317474143,
+          "duration" : 787
         },
         "flaky" : false,
         "newFailed" : false,
@@ -296,12 +75,12 @@
         "parameters" : [ ]
       }, {
         "name" : "test_not_found_response",
-        "uid" : "627c9ec0e9bf9884",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "uid" : "f9322c7e60634f3a",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316317436,
-          "stop" : 1744316317487,
+          "start" : 1744317447535,
+          "stop" : 1744317447586,
           "duration" : 51
         },
         "flaky" : false,
@@ -312,14 +91,14 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       }, {
-        "name" : "test_grades_list_student_id",
-        "uid" : "33e97e9725d2db93",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "name" : "test_grades_stats_general_avg",
+        "uid" : "b4f21c5cacb92777",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316322914,
-          "stop" : 1744316323579,
-          "duration" : 665
+          "start" : 1744317467661,
+          "stop" : 1744317468324,
+          "duration" : 663
         },
         "flaky" : false,
         "newFailed" : false,
@@ -329,14 +108,14 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       }, {
-        "name" : "test_not_autorized_status_code",
-        "uid" : "570634226979cc3f",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "name" : "test_not_autorized_response",
+        "uid" : "a29f2d6924bee770",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316315965,
-          "stop" : 1744316316017,
-          "duration" : 52
+          "start" : 1744317445541,
+          "stop" : 1744317445588,
+          "duration" : 47
         },
         "flaky" : false,
         "newFailed" : false,
@@ -347,13 +126,234 @@
         "parameters" : [ ]
       }, {
         "name" : "test_access_denied_response",
-        "uid" : "efe7ad3b5c39cd66",
-        "parentUid" : "14312a05d4ef1cc867710271fade6449",
+        "uid" : "f0d4fb96a78a2d34",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
         "status" : "passed",
         "time" : {
-          "start" : 1744316315917,
-          "stop" : 1744316315961,
-          "duration" : 44
+          "start" : 1744317445432,
+          "stop" : 1744317445477,
+          "duration" : 45
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_general_min",
+        "uid" : "8e73b7aee72e0528",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317462523,
+          "stop" : 1744317463212,
+          "duration" : 689
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_not_autorized_status_code",
+        "uid" : "c46dd58a96205f16",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317445481,
+          "stop" : 1744317445536,
+          "duration" : 55
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_search_success_status_code",
+        "uid" : "511ab1c60cf10895",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317448544,
+          "stop" : 1744317448650,
+          "duration" : 106
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_by_teacher_max",
+        "uid" : "1f29fd92f2c0cffa",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317476441,
+          "stop" : 1744317477225,
+          "duration" : 784
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_list_len",
+        "uid" : "79c70be1fcf79096",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317451364,
+          "stop" : 1744317452043,
+          "duration" : 679
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_search_success_response_id",
+        "uid" : "fd2e6c4406948d5f",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317449487,
+          "stop" : 1744317449590,
+          "duration" : 103
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_list_student_id",
+        "uid" : "67adeafcba6de579",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317453349,
+          "stop" : 1744317454019,
+          "duration" : 670
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_general_max",
+        "uid" : "55ae643680e2ca1d",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317465050,
+          "stop" : 1744317465720,
+          "duration" : 670
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_by_teacher_count",
+        "uid" : "b62f0983cf6ba6bd",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317470387,
+          "stop" : 1744317471155,
+          "duration" : 768
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_access_denied_status_code",
+        "uid" : "76a6bde6c7b7674b",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317445378,
+          "stop" : 1744317445427,
+          "duration" : 49
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_not_found_status_code",
+        "uid" : "708dd98f08eef569",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317446551,
+          "stop" : 1744317446622,
+          "duration" : 71
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_list_grade",
+        "uid" : "11676ec639227e3a",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317457693,
+          "stop" : 1744317458368,
+          "duration" : 675
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_grades_stats_by_teacher_avg",
+        "uid" : "11d8cbe749029344",
+        "parentUid" : "55a3a0955bb3a67225709c256eff1556",
+        "status" : "passed",
+        "time" : {
+          "start" : 1744317479609,
+          "stop" : 1744317480395,
+          "duration" : 786
         },
         "flaky" : false,
         "newFailed" : false,
@@ -363,8 +363,8 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "14312a05d4ef1cc867710271fade6449"
+      "uid" : "55a3a0955bb3a67225709c256eff1556"
     } ],
-    "uid" : "7663c7a762c046c0294f39bb49bcebaf"
+    "uid" : "fd3c8b92ef483df60f07e16ab8cefb0d"
   } ]
 }

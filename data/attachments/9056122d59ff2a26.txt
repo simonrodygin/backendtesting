@@ -1,0 +1,16 @@
+INFO     Logger:logger.py:28 Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 146' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=kgiles&password=MClh5l0FCY3FyPw4%2BZSvL7o%28%40Gy%40K_&password_repeat=MClh5l0FCY3FyPw4%2BZSvL7o%28%40Gy%40K_&email=sbishop%40example.com' http://127.0.0.1:8000//auth/register/
+INFO     Logger:logger.py:28 Response status code: 201, time: 0.551353s
+INFO     Logger:logger.py:28 Response: {
+  "detail": "User registered"
+}
+INFO     Logger:logger.py:28 Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=kgiles&password=MClh5l0FCY3FyPw4%2BZSvL7o%28%40Gy%40K_' http://127.0.0.1:8000//auth/login/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.313707s
+INFO     Logger:logger.py:28 Response: {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoia2dpbGVzIiwiZXhwIjoxNzQ0MzI0NjQ3LCJpYXQiOjE3NDQzMTc0NDd9.Qa4t0X8bAVFb5MGWTXCqgw5bIMjH2HjYNVRuoXuOESAC5aOMCmFft1rTkNSsssWvQyVDbSV8OtvxjBVzxh4Z4S9Jujn2YwvVULjJEakBUxFuvwrtVVxT0ZgAHE5W0bVkjD0nXtARJQsmMJc0qo-Ds9FK8OqJzRi6JeAZiRw5jccKdEdB7dRqgC9VmUJNo3ylbqAO0Q_HPnBbKpsZuwm38CUMdoWlms9G69Q08T0Qo8OwFvL_oZNR4diICOOJuGBmsmmBbs9war0OXQsvGEFVderuQczS_FwjZd61mqFLUFQK5CeTGXgAO7Zt9khaNALD5PYMPNPfvwFeu00XE4KoHw",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:28 Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoia2dpbGVzIiwiZXhwIjoxNzQ0MzI0NjQ3LCJpYXQiOjE3NDQzMTc0NDd9.Qa4t0X8bAVFb5MGWTXCqgw5bIMjH2HjYNVRuoXuOESAC5aOMCmFft1rTkNSsssWvQyVDbSV8OtvxjBVzxh4Z4S9Jujn2YwvVULjJEakBUxFuvwrtVVxT0ZgAHE5W0bVkjD0nXtARJQsmMJc0qo-Ds9FK8OqJzRi6JeAZiRw5jccKdEdB7dRqgC9VmUJNo3ylbqAO0Q_HPnBbKpsZuwm38CUMdoWlms9G69Q08T0Qo8OwFvL_oZNR4diICOOJuGBmsmmBbs9war0OXQsvGEFVderuQczS_FwjZd61mqFLUFQK5CeTGXgAO7Zt9khaNALD5PYMPNPfvwFeu00XE4KoHw' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/1/
+INFO     Logger:logger.py:28 Response status code: 404, time: 0.008194s
+INFO     Logger:logger.py:28 Response: {
+  "detail": "Group not found"
+}
