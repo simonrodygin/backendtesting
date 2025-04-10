@@ -1,0 +1,205 @@
+{
+  "uid" : "23c07874ac8548ff",
+  "name" : "test_search_success_status_code",
+  "fullName" : "tests.contract.group.test_contract_get_by_id.TestContractgetByID#test_search_success_status_code",
+  "historyId" : "e4eff0ea9f6d4be3b64599117f0f8609",
+  "time" : {
+    "start" : 1744314149107,
+    "stop" : 1744314149215,
+    "duration" : 108
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1744314146826,
+      "stop" : 1744314146827,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_readiness_check",
+    "time" : {
+      "start" : 1744314148474,
+      "stop" : 1744314148476,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_session_utils_anon",
+    "time" : {
+      "start" : 1744314148476,
+      "stop" : 1744314148476,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "random_user_access_token",
+    "time" : {
+      "start" : 1744314148476,
+      "stop" : 1744314149106,
+      "duration" : 630
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clean_group_uni",
+    "time" : {
+      "start" : 1744314149106,
+      "stop" : 1744314149106,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_session_utils",
+    "time" : {
+      "start" : 1744314149106,
+      "stop" : 1744314149106,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_service",
+    "time" : {
+      "start" : 1744314149106,
+      "stop" : 1744314149106,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "896959599cd8eaa9",
+      "name" : "log",
+      "source" : "896959599cd8eaa9.txt",
+      "type" : "text/plain",
+      "size" : 6913
+    }, {
+      "uid" : "1b0c4194d64dc2c3",
+      "name" : "stdout",
+      "source" : "1b0c4194d64dc2c3.txt",
+      "type" : "text/plain",
+      "size" : 7064
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clean_group_uni::0",
+    "time" : {
+      "start" : 1744314149216,
+      "stop" : 1744314149426,
+      "duration" : 210
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "search_success"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.contract.group"
+  }, {
+    "name" : "suite",
+    "value" : "test_contract_get_by_id"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestContractgetByID"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1927-344"
+  }, {
+    "name" : "thread",
+    "value" : "3972-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.contract.group.test_contract_get_by_id"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "search_success" ]
+  },
+  "source" : "23c07874ac8548ff.json",
+  "parameterValues" : [ ]
+}

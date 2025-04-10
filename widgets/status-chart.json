@@ -1,1 +1,211 @@
-[ ]
+[ {
+  "uid" : "3af9672b039aa9",
+  "name" : "test_grades_stats_by_teacher_avg",
+  "time" : {
+    "start" : 1744314181093,
+    "stop" : 1744314181898,
+    "duration" : 805
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "618b7de4007143b5",
+  "name" : "test_not_autorized_status_code",
+  "time" : {
+    "start" : 1744314146940,
+    "stop" : 1744314146993,
+    "duration" : 53
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2759f0d9ffc47768",
+  "name" : "test_grades_list_student_id",
+  "time" : {
+    "start" : 1744314154000,
+    "stop" : 1744314154695,
+    "duration" : 695
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fd98eb544f202f4",
+  "name" : "test_grades_stats_by_teacher_max",
+  "time" : {
+    "start" : 1744314177866,
+    "stop" : 1744314178672,
+    "duration" : 806
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db220486c4f84361",
+  "name" : "test_grades_list_len",
+  "time" : {
+    "start" : 1744314151955,
+    "stop" : 1744314152663,
+    "duration" : 708
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a72227acf6f418a",
+  "name" : "test_access_denied_response",
+  "time" : {
+    "start" : 1744314146890,
+    "stop" : 1744314146935,
+    "duration" : 45
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ee1d529623d3c707",
+  "name" : "test_not_found_status_code",
+  "time" : {
+    "start" : 1744314147709,
+    "stop" : 1744314147781,
+    "duration" : 72
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "46df12c72d78d205",
+  "name" : "test_grades_list_grade",
+  "time" : {
+    "start" : 1744314158411,
+    "stop" : 1744314159089,
+    "duration" : 678
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db47cf16fd50e6a6",
+  "name" : "test_grades_stats_by_teacher_count",
+  "time" : {
+    "start" : 1744314171695,
+    "stop" : 1744314172483,
+    "duration" : 788
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5f0cd7876d99137",
+  "name" : "test_grades_stats_general_min",
+  "time" : {
+    "start" : 1744314163290,
+    "stop" : 1744314163975,
+    "duration" : 685
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8861c3ced743c63f",
+  "name" : "test_search_success_response_name",
+  "time" : {
+    "start" : 1744314151007,
+    "stop" : 1744314151113,
+    "duration" : 106
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "23c07874ac8548ff",
+  "name" : "test_search_success_status_code",
+  "time" : {
+    "start" : 1744314149107,
+    "stop" : 1744314149215,
+    "duration" : 108
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "476d7f71479ce8a3",
+  "name" : "test_grades_stats_general_count",
+  "time" : {
+    "start" : 1744314160791,
+    "stop" : 1744314161462,
+    "duration" : 671
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b94956c607e0a7cf",
+  "name" : "test_not_autorized_response",
+  "time" : {
+    "start" : 1744314146998,
+    "stop" : 1744314147046,
+    "duration" : 48
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "194436987fd1cbb8",
+  "name" : "test_grades_list_teacher_id",
+  "time" : {
+    "start" : 1744314156150,
+    "stop" : 1744314156837,
+    "duration" : 687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5cf375bf8fdee98",
+  "name" : "test_search_success_response_id",
+  "time" : {
+    "start" : 1744314150062,
+    "stop" : 1744314150167,
+    "duration" : 105
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "869ddd029caae380",
+  "name" : "test_access_denied_status_code",
+  "time" : {
+    "start" : 1744314146835,
+    "stop" : 1744314146884,
+    "duration" : 49
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a32a23127d677ab",
+  "name" : "test_grades_stats_general_max",
+  "time" : {
+    "start" : 1744314165801,
+    "stop" : 1744314166473,
+    "duration" : 672
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6e219ece7837b158",
+  "name" : "test_not_found_response",
+  "time" : {
+    "start" : 1744314148418,
+    "stop" : 1744314148471,
+    "duration" : 53
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a22dfa7f87af9d58",
+  "name" : "test_grades_stats_general_avg",
+  "time" : {
+    "start" : 1744314168421,
+    "stop" : 1744314169585,
+    "duration" : 1164
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c9a109a24b7024fd",
+  "name" : "test_grades_stats_by_teacher_min",
+  "time" : {
+    "start" : 1744314174708,
+    "stop" : 1744314175529,
+    "duration" : 821
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

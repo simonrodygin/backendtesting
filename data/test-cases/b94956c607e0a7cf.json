@@ -1,0 +1,145 @@
+{
+  "uid" : "b94956c607e0a7cf",
+  "name" : "test_not_autorized_response",
+  "fullName" : "tests.contract.group.test_contract_get_by_id.TestContractgetByID#test_not_autorized_response",
+  "historyId" : "273627b7369d7a6ca4b1d54dafd8ffca",
+  "time" : {
+    "start" : 1744314146998,
+    "stop" : 1744314147046,
+    "duration" : 48
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1744314146826,
+      "stop" : 1744314146827,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_readiness_check",
+    "time" : {
+      "start" : 1744314146995,
+      "stop" : 1744314146998,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_service_wrong_creds",
+    "time" : {
+      "start" : 1744314146998,
+      "stop" : 1744314146998,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_session_wrong_creds",
+    "time" : {
+      "start" : 1744314146998,
+      "stop" : 1744314146998,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "16b70c08be791def",
+      "name" : "log",
+      "source" : "16b70c08be791def.txt",
+      "type" : "text/plain",
+      "size" : 388
+    }, {
+      "uid" : "3c50d9bb5f17d7e9",
+      "name" : "stdout",
+      "source" : "3c50d9bb5f17d7e9.txt",
+      "type" : "text/plain",
+      "size" : 407
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "not_autorized"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.contract.group"
+  }, {
+    "name" : "suite",
+    "value" : "test_contract_get_by_id"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestContractgetByID"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1927-344"
+  }, {
+    "name" : "thread",
+    "value" : "3972-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.contract.group.test_contract_get_by_id"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "not_autorized" ]
+  },
+  "source" : "b94956c607e0a7cf.json",
+  "parameterValues" : [ ]
+}

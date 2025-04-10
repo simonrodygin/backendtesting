@@ -1,0 +1,53 @@
+[2025-04-10 19:42:30,651 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 154' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezdavid&password=en6G7iv4lG%2BwLJF%2A%2AT%2AYcnmdyber%2Bw&password_repeat=en6G7iv4lG%2BwLJF%2A%2AT%2AYcnmdyber%2Bw&email=robin12%40example.net' http://127.0.0.1:8000//auth/register/
+[2025-04-10 19:42:30,652 - INFO] - Response status code: 201, time: 0.272768s
+[2025-04-10 19:42:30,652 - INFO] - Response: {
+  "detail": "User registered"
+}
+[2025-04-10 19:42:31,005 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezdavid&password=en6G7iv4lG%2BwLJF%2A%2AT%2AYcnmdyber%2Bw' http://127.0.0.1:8000//auth/login/
+[2025-04-10 19:42:31,005 - INFO] - Response status code: 200, time: 0.312746s
+[2025-04-10 19:42:31,005 - INFO] - Response: {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg",
+  "token_type": "Bearer"
+}
+[2025-04-10 19:42:31,060 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'Content-Length: 22' -H 'User-Agent: python-requests/2.32.3' -d '{"name":"development"}' http://127.0.0.1:8001/groups/
+[2025-04-10 19:42:31,060 - INFO] - Response status code: 201, time: 0.010856s
+[2025-04-10 19:42:31,060 - INFO] - Response: {
+  "name": "development",
+  "id": 3
+}
+[2025-04-10 19:42:31,112 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/3/
+[2025-04-10 19:42:31,112 - INFO] - Response status code: 200, time: 0.008559s
+[2025-04-10 19:42:31,112 - INFO] - Response: {
+  "name": "development",
+  "id": 3
+}
+[2025-04-10 19:42:31,113 - INFO] - ### Cleaning group university data
+[2025-04-10 19:42:31,163 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-10 19:42:31,163 - INFO] - Response status code: 200, time: 0.007905s
+[2025-04-10 19:42:31,163 - INFO] - Response: [
+  {
+    "name": "development",
+    "id": 3
+  }
+]
+[2025-04-10 19:42:31,214 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-10 19:42:31,214 - INFO] - Response status code: 200, time: 0.008055s
+[2025-04-10 19:42:31,214 - INFO] - Response: [
+  {
+    "name": "development",
+    "id": 3
+  }
+]
+[2025-04-10 19:42:31,265 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-10 19:42:31,265 - INFO] - Response status code: 200, time: 0.008233s
+[2025-04-10 19:42:31,265 - INFO] - Response: [
+  {
+    "name": "development",
+    "id": 3
+  }
+]
+[2025-04-10 19:42:31,317 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoibG9wZXpkYXZpZCIsImV4cCI6MTc0NDMyMTM1MCwiaWF0IjoxNzQ0MzE0MTUwfQ.Xd3gPsdqAY6FYR3b_G86lIcllBs2RjH4EleIJpYoljvsmx24fitBD4MQbs8_kZ92ZMtNYhl9-4PGsB30hQVlNrExQOIPfPDxBLznS8Z-uaK8eGbYRXFYHSXwnSRahX7Smlrul3bhFYLA59RtERrbDYq9DXM7zW573P0Vr5eYChVl1aavgZBNbWLOY4_lwG5agI9KrGJZkU_UoBbbyHd7WbsIg3pEqxZFyTFLhnRcw6cj0q0OprxVmVx2BfbtGth0O48P4BDTU-cHWd9UXhTzZiurDwYZ0lnkdm9oVAJjribbRYHbsCLtzYBI0sI0J_QryjCBGcOlI1BTmsh56TlLsg' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/3/
+[2025-04-10 19:42:31,317 - INFO] - Response status code: 200, time: 0.009695s
+[2025-04-10 19:42:31,317 - INFO] - Response: {
+  "detail": "Group deleted"
+}
