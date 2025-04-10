@@ -1,0 +1,16 @@
+[2025-04-10 20:18:36,372 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 169' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gmartinez&password=d%40RpRxxj%23%28IIB%2B1uY%5E_pXj3%2436%40%26zt&password_repeat=d%40RpRxxj%23%28IIB%2B1uY%5E_pXj3%2436%40%26zt&email=janicelynch%40example.net' http://127.0.0.1:8000//auth/register/
+[2025-04-10 20:18:36,372 - INFO] - Response status code: 201, time: 0.299191s
+[2025-04-10 20:18:36,372 - INFO] - Response: {
+  "detail": "User registered"
+}
+[2025-04-10 20:18:36,730 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 74' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gmartinez&password=d%40RpRxxj%23%28IIB%2B1uY%5E_pXj3%2436%40%26zt' http://127.0.0.1:8000//auth/login/
+[2025-04-10 20:18:36,730 - INFO] - Response status code: 200, time: 0.316705s
+[2025-04-10 20:18:36,730 - INFO] - Response: {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiZ21hcnRpbmV6IiwiZXhwIjoxNzQ0MzIzNTE2LCJpYXQiOjE3NDQzMTYzMTZ9.VGP5iLJwMtNB7MbmgZ2l4gg5LzFKF0wc28sTyszjP1s29iCTHDwfGIo7cETPyvU--uFDXxe5pKO03nXXN5SO3fjMgQioni-IIlEPuPz3fuqX5FVQYbtlqvpGHwOMgdKUOWAy977LpR4evWa-wQpt3ttKMNwx4kQ1QKnYe11yDS7lLEnvhnqd7MmF5_W99TtoUsrvhpwp3TDlI8s-sWmdNhdFPzgiNb5QHE4qw51tpajR2jDXC6mxRhuDC-f8UslgnEqNiHfv3Ieo_33EPl0G6j-8UA884l2bPFQ3rtz4ubjCLWgtxLcHZZm4yTKEr_UoCM8NVqQO-P3M9WdcMxWYpg",
+  "token_type": "Bearer"
+}
+[2025-04-10 20:18:36,802 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiZ21hcnRpbmV6IiwiZXhwIjoxNzQ0MzIzNTE2LCJpYXQiOjE3NDQzMTYzMTZ9.VGP5iLJwMtNB7MbmgZ2l4gg5LzFKF0wc28sTyszjP1s29iCTHDwfGIo7cETPyvU--uFDXxe5pKO03nXXN5SO3fjMgQioni-IIlEPuPz3fuqX5FVQYbtlqvpGHwOMgdKUOWAy977LpR4evWa-wQpt3ttKMNwx4kQ1QKnYe11yDS7lLEnvhnqd7MmF5_W99TtoUsrvhpwp3TDlI8s-sWmdNhdFPzgiNb5QHE4qw51tpajR2jDXC6mxRhuDC-f8UslgnEqNiHfv3Ieo_33EPl0G6j-8UA884l2bPFQ3rtz4ubjCLWgtxLcHZZm4yTKEr_UoCM8NVqQO-P3M9WdcMxWYpg' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/1/
+[2025-04-10 20:18:36,802 - INFO] - Response status code: 404, time: 0.028049s
+[2025-04-10 20:18:36,802 - INFO] - Response: {
+  "detail": "Group not found"
+}

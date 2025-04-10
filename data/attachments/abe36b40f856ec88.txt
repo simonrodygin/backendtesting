@@ -1,5 +1,0 @@
-[2025-04-10 20:05:15,319 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/1/
-[2025-04-10 20:05:15,319 - INFO] - Response status code: 403, time: 0.005265s
-[2025-04-10 20:05:15,319 - INFO] - Response: {
-  "detail": "Access denied"
-}
