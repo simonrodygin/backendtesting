@@ -47,11 +47,6 @@ jobs:
          with:
            name: docker-compose-logs
            path: ./docker-compose.yml
- 
-       - name: healthcheck
-         run: |
-               curl "http://127.0.0.1:8000/docs#/"
-               curl "http://127.0.0.1:8001/docs#/"
        
        - name: Install dependencies for tests
          run: |
@@ -61,6 +56,11 @@ jobs:
        - name: Run tests
          run: |
            python -m pytest --alluredir=allure-results
+
+       - name: healthcheck
+         run: |
+               curl "http://127.0.0.1:8000/docs#/"
+               curl "http://127.0.0.1:8001/docs#/"
  
        - name: Save Allure test results as artifact
          uses: actions/upload-artifact@v4
