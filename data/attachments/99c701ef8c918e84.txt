@@ -1,0 +1,5 @@
+[2025-04-10 20:05:15,474 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer wrong' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/1/
+[2025-04-10 20:05:15,474 - INFO] - Response status code: 401, time: 0.003563s
+[2025-04-10 20:05:15,474 - INFO] - Response: {
+  "detail": "Invalid JWT token"
+}
