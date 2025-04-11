@@ -7,12 +7,12 @@
       "name" : "contract.group.test_contract_get_by_id",
       "children" : [ {
         "name" : "test_access_denied_status_code",
-        "uid" : "f605f3aec12d388",
+        "uid" : "6c3820814ed4ba1b",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390569967,
-          "stop" : 1744390570016,
+          "start" : 1744393173045,
+          "stop" : 1744393173094,
           "duration" : 49
         },
         "flaky" : false,
@@ -24,13 +24,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_access_denied_response",
-        "uid" : "e187d016a37e003e",
+        "uid" : "c85a16d40d2c6a76",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390570022,
-          "stop" : 1744390570068,
-          "duration" : 46
+          "start" : 1744393173099,
+          "stop" : 1744393173144,
+          "duration" : 45
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +41,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_not_autorized_status_code",
-        "uid" : "b80d8f8deed8d6c9",
+        "uid" : "327ad2a556a3192a",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390570073,
-          "stop" : 1744390570128,
-          "duration" : 55
+          "start" : 1744393173149,
+          "stop" : 1744393173206,
+          "duration" : 57
         },
         "flaky" : false,
         "newFailed" : false,
@@ -58,13 +58,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_not_autorized_response",
-        "uid" : "b2f39f9d2df1c987",
+        "uid" : "b732ff774b90b9e3",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390570132,
-          "stop" : 1744390570180,
-          "duration" : 48
+          "start" : 1744393173210,
+          "stop" : 1744393173259,
+          "duration" : 49
         },
         "flaky" : false,
         "newFailed" : false,
@@ -75,13 +75,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_not_found_status_code",
-        "uid" : "f7f612310360e72f",
+        "uid" : "f4fc80c153e7ebc5",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390570849,
-          "stop" : 1744390570921,
-          "duration" : 72
+          "start" : 1744393173921,
+          "stop" : 1744393173992,
+          "duration" : 71
         },
         "flaky" : false,
         "newFailed" : false,
@@ -92,12 +92,12 @@
         "parameters" : [ ]
       }, {
         "name" : "test_not_found_response",
-        "uid" : "65a52b54280ed98e",
+        "uid" : "9517b95b243d3ed4",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390571556,
-          "stop" : 1744390571607,
+          "start" : 1744393174627,
+          "stop" : 1744393174678,
           "duration" : 51
         },
         "flaky" : false,
@@ -109,13 +109,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_search_success_status_code",
-        "uid" : "ffba9e86070dfbc7",
+        "uid" : "8999915ee6d89138",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390572243,
-          "stop" : 1744390572352,
-          "duration" : 109
+          "start" : 1744393175316,
+          "stop" : 1744393175421,
+          "duration" : 105
         },
         "flaky" : false,
         "newFailed" : false,
@@ -126,13 +126,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_search_success_response_id",
-        "uid" : "390f9e2da9089f6e",
+        "uid" : "393f102d9abc36ce",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390573196,
-          "stop" : 1744390573301,
-          "duration" : 105
+          "start" : 1744393176250,
+          "stop" : 1744393176352,
+          "duration" : 102
         },
         "flaky" : false,
         "newFailed" : false,
@@ -143,13 +143,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_search_success_response_name",
-        "uid" : "691d0fddf63c00b",
+        "uid" : "5a986bf9ad0fa278",
         "parentUid" : "2ec32b253cb9823d0d203e00a424d0b9",
         "status" : "passed",
         "time" : {
-          "start" : 1744390574146,
-          "stop" : 1744390574251,
-          "duration" : 105
+          "start" : 1744393177180,
+          "stop" : 1744393177281,
+          "duration" : 101
         },
         "flaky" : false,
         "newFailed" : false,
@@ -164,13 +164,13 @@
       "name" : "e2e.test_grades",
       "children" : [ {
         "name" : "test_grades_list_len",
-        "uid" : "c5accafa17ea35ee",
+        "uid" : "6f3b3d1e551a48",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390575095,
-          "stop" : 1744390575798,
-          "duration" : 703
+          "start" : 1744393178132,
+          "stop" : 1744393178833,
+          "duration" : 701
         },
         "flaky" : false,
         "newFailed" : false,
@@ -181,13 +181,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_list_student_id",
-        "uid" : "9d9990d787842fd2",
+        "uid" : "d1efed1478705e3b",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390577125,
-          "stop" : 1744390577813,
-          "duration" : 688
+          "start" : 1744393180158,
+          "stop" : 1744393180848,
+          "duration" : 690
         },
         "flaky" : false,
         "newFailed" : false,
@@ -198,13 +198,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_list_teacher_id",
-        "uid" : "fb7ee0fea6faa502",
+        "uid" : "a0713232255868c",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390579262,
-          "stop" : 1744390579947,
-          "duration" : 685
+          "start" : 1744393182291,
+          "stop" : 1744393182967,
+          "duration" : 676
         },
         "flaky" : false,
         "newFailed" : false,
@@ -215,13 +215,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_list_grade",
-        "uid" : "1ff3a5c045fa50cd",
+        "uid" : "316355d86e0aa26c",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390581530,
-          "stop" : 1744390582214,
-          "duration" : 684
+          "start" : 1744393184530,
+          "stop" : 1744393185198,
+          "duration" : 668
         },
         "flaky" : false,
         "newFailed" : false,
@@ -232,13 +232,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_general_count",
-        "uid" : "9c0856a1732b6aea",
+        "uid" : "1ae0860be5355328",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390583937,
-          "stop" : 1744390584630,
-          "duration" : 693
+          "start" : 1744393186883,
+          "stop" : 1744393187546,
+          "duration" : 663
         },
         "flaky" : false,
         "newFailed" : false,
@@ -249,13 +249,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_general_min",
-        "uid" : "110daea714b6282e",
+        "uid" : "7aa0fe3f61e36533",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390586483,
-          "stop" : 1744390587180,
-          "duration" : 697
+          "start" : 1744393189361,
+          "stop" : 1744393190035,
+          "duration" : 674
         },
         "flaky" : false,
         "newFailed" : false,
@@ -266,13 +266,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_general_max",
-        "uid" : "7935f60f0d379b8",
+        "uid" : "c4ee9da6ee7f9dd4",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390589031,
-          "stop" : 1744390590253,
-          "duration" : 1222
+          "start" : 1744393191850,
+          "stop" : 1744393192525,
+          "duration" : 675
         },
         "flaky" : false,
         "newFailed" : false,
@@ -283,13 +283,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_general_avg",
-        "uid" : "e20867bfc3de3661",
+        "uid" : "1757e6041af74849",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390592239,
-          "stop" : 1744390592936,
-          "duration" : 697
+          "start" : 1744393194462,
+          "stop" : 1744393195130,
+          "duration" : 668
         },
         "flaky" : false,
         "newFailed" : false,
@@ -300,13 +300,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_by_teacher_count",
-        "uid" : "c358ef2f11e3ba0a",
+        "uid" : "69837c49cacde8fe",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390595048,
-          "stop" : 1744390595857,
-          "duration" : 809
+          "start" : 1744393197536,
+          "stop" : 1744393198316,
+          "duration" : 780
         },
         "flaky" : false,
         "newFailed" : false,
@@ -317,13 +317,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_by_teacher_min",
-        "uid" : "46516ef692cf2f29",
+        "uid" : "330d85904cd99a43",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390598095,
-          "stop" : 1744390598893,
-          "duration" : 798
+          "start" : 1744393200516,
+          "stop" : 1744393201287,
+          "duration" : 771
         },
         "flaky" : false,
         "newFailed" : false,
@@ -334,13 +334,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_by_teacher_max",
-        "uid" : "aa3dd7b2851f8a99",
+        "uid" : "759c00fea3f8110",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390601229,
-          "stop" : 1744390602036,
-          "duration" : 807
+          "start" : 1744393203593,
+          "stop" : 1744393204371,
+          "duration" : 778
         },
         "flaky" : false,
         "newFailed" : false,
@@ -351,13 +351,13 @@
         "parameters" : [ ]
       }, {
         "name" : "test_grades_stats_by_teacher_avg",
-        "uid" : "dbc15dd6da279c82",
+        "uid" : "8dd59d99e7f38460",
         "parentUid" : "2b78d276ff47bdb5f9f188aca8268d41",
         "status" : "passed",
         "time" : {
-          "start" : 1744390604452,
-          "stop" : 1744390605259,
-          "duration" : 807
+          "start" : 1744393206738,
+          "stop" : 1744393207512,
+          "duration" : 774
         },
         "flaky" : false,
         "newFailed" : false,
