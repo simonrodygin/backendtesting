@@ -1,0 +1,619 @@
+[2025-04-11 16:56:26,126 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=mtorres&password=L3%28ABFnf%25%21%28%269mOC_R5%5EL_DdD9OMuS&password_repeat=L3%28ABFnf%25%21%28%269mOC_R5%5EL_DdD9OMuS&email=phillipsmallory%40example.org' http://127.0.0.1:8000//auth/register/
+[2025-04-11 16:56:26,127 - INFO] - Response status code: 201, time: 0.27327s
+[2025-04-11 16:56:26,127 - INFO] - Response: {
+  "detail": "User registered"
+}
+[2025-04-11 16:56:26,481 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=mtorres&password=L3%28ABFnf%25%21%28%269mOC_R5%5EL_DdD9OMuS' http://127.0.0.1:8000//auth/login/
+[2025-04-11 16:56:26,481 - INFO] - Response status code: 200, time: 0.313026s
+[2025-04-11 16:56:26,481 - INFO] - Response: {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ",
+  "token_type": "Bearer"
+}
+[2025-04-11 16:56:26,482 - INFO] - ### Step 1 make entitites
+[2025-04-11 16:56:26,536 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 17' -H 'User-Agent: python-requests/2.32.3' -d '{"name":"create"}' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:26,536 - INFO] - Response status code: 201, time: 0.010306s
+[2025-04-11 16:56:26,536 - INFO] - Response: {
+  "name": "create",
+  "id": 19
+}
+[2025-04-11 16:56:26,591 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 142' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"David Jacobs","last_name":"Andrew Smith","email":"michael23@example.net","degree":"Bachelor","phone":"+71273145","group_id":19}' http://127.0.0.1:8001/students/
+[2025-04-11 16:56:26,591 - INFO] - Response status code: 201, time: 0.011083s
+[2025-04-11 16:56:26,591 - INFO] - Response: {
+  "first_name": "David Jacobs",
+  "last_name": "Andrew Smith",
+  "email": "michael23@example.net",
+  "degree": "Bachelor",
+  "phone": "+71273145",
+  "group_id": 19,
+  "id": 16
+}
+[2025-04-11 16:56:26,645 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 78' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"Joshua House","last_name":"Ronald Shaffer","subject":"Biology"}' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:26,645 - INFO] - Response status code: 201, time: 0.01021s
+[2025-04-11 16:56:26,645 - INFO] - Response: {
+  "first_name": "Joshua House",
+  "last_name": "Ronald Shaffer",
+  "subject": "Biology",
+  "id": 16
+}
+[2025-04-11 16:56:26,699 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 35' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'teacher_id=16&student_id=16&grade=5' http://127.0.0.1:8001/grades/
+[2025-04-11 16:56:26,699 - INFO] - Response status code: 201, time: 0.01108s
+[2025-04-11 16:56:26,699 - INFO] - Response: {
+  "teacher_id": 16,
+  "student_id": 16,
+  "grade": 5,
+  "id": 16
+}
+[2025-04-11 16:56:26,752 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 15' -H 'User-Agent: python-requests/2.32.3' -d '{"name":"want"}' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:26,752 - INFO] - Response status code: 201, time: 0.010181s
+[2025-04-11 16:56:26,752 - INFO] - Response: {
+  "name": "want",
+  "id": 20
+}
+[2025-04-11 16:56:26,807 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 145' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"Joseph Brewer","last_name":"Jonathan Romero","email":"sarahhenry@example.org","degree":"Master","phone":"+71490904","group_id":20}' http://127.0.0.1:8001/students/
+[2025-04-11 16:56:26,807 - INFO] - Response status code: 201, time: 0.01162s
+[2025-04-11 16:56:26,807 - INFO] - Response: {
+  "first_name": "Joseph Brewer",
+  "last_name": "Jonathan Romero",
+  "email": "sarahhenry@example.org",
+  "degree": "Master",
+  "phone": "+71490904",
+  "group_id": 20,
+  "id": 17
+}
+[2025-04-11 16:56:26,860 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 79' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"Donald Clark","last_name":"Kayla Gutierrez","subject":"Biology"}' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:26,860 - INFO] - Response status code: 201, time: 0.009342s
+[2025-04-11 16:56:26,860 - INFO] - Response: {
+  "first_name": "Donald Clark",
+  "last_name": "Kayla Gutierrez",
+  "subject": "Biology",
+  "id": 17
+}
+[2025-04-11 16:56:26,914 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 35' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'teacher_id=17&student_id=17&grade=1' http://127.0.0.1:8001/grades/
+[2025-04-11 16:56:26,914 - INFO] - Response status code: 201, time: 0.01114s
+[2025-04-11 16:56:26,915 - INFO] - Response: {
+  "teacher_id": 17,
+  "student_id": 17,
+  "grade": 1,
+  "id": 17
+}
+[2025-04-11 16:56:26,967 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 16' -H 'User-Agent: python-requests/2.32.3' -d '{"name":"stuff"}' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:26,967 - INFO] - Response status code: 201, time: 0.00999s
+[2025-04-11 16:56:26,968 - INFO] - Response: {
+  "name": "stuff",
+  "id": 21
+}
+[2025-04-11 16:56:27,022 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"Veronica Pierce","last_name":"Samantha Sparks","email":"maddoxhenry@example.com","degree":"Master","phone":"+77479423","group_id":21}' http://127.0.0.1:8001/students/
+[2025-04-11 16:56:27,022 - INFO] - Response status code: 201, time: 0.011247s
+[2025-04-11 16:56:27,022 - INFO] - Response: {
+  "first_name": "Veronica Pierce",
+  "last_name": "Samantha Sparks",
+  "email": "maddoxhenry@example.com",
+  "degree": "Master",
+  "phone": "+77479423",
+  "group_id": 21,
+  "id": 18
+}
+[2025-04-11 16:56:27,075 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 80' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name":"Katelyn Davila","last_name":"William Barr","subject":"Geography"}' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:27,075 - INFO] - Response status code: 201, time: 0.009721s
+[2025-04-11 16:56:27,076 - INFO] - Response: {
+  "first_name": "Katelyn Davila",
+  "last_name": "William Barr",
+  "subject": "Geography",
+  "id": 18
+}
+[2025-04-11 16:56:27,129 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 35' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'teacher_id=18&student_id=18&grade=5' http://127.0.0.1:8001/grades/
+[2025-04-11 16:56:27,129 - INFO] - Response status code: 201, time: 0.011227s
+[2025-04-11 16:56:27,129 - INFO] - Response: {
+  "teacher_id": 18,
+  "student_id": 18,
+  "grade": 5,
+  "id": 18
+}
+[2025-04-11 16:56:27,130 - INFO] - ### Step 2 Get statistics
+[2025-04-11 16:56:27,179 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/grades/stats/
+[2025-04-11 16:56:27,179 - INFO] - Response status code: 200, time: 0.008889s
+[2025-04-11 16:56:27,179 - INFO] - Response: {
+  "count": 3,
+  "min": 1,
+  "max": 5,
+  "avg": 3.6666666666666665
+}
+[2025-04-11 16:56:27,180 - INFO] - ### Cleaning group university data
+[2025-04-11 16:56:27,231 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:27,231 - INFO] - Response status code: 200, time: 0.008256s
+[2025-04-11 16:56:27,231 - INFO] - Response: [
+  {
+    "name": "create",
+    "id": 19
+  },
+  {
+    "name": "want",
+    "id": 20
+  },
+  {
+    "name": "stuff",
+    "id": 21
+  }
+]
+[2025-04-11 16:56:27,282 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:27,282 - INFO] - Response status code: 200, time: 0.008136s
+[2025-04-11 16:56:27,283 - INFO] - Response: [
+  {
+    "name": "create",
+    "id": 19
+  },
+  {
+    "name": "want",
+    "id": 20
+  },
+  {
+    "name": "stuff",
+    "id": 21
+  }
+]
+[2025-04-11 16:56:27,333 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+[2025-04-11 16:56:27,333 - INFO] - Response status code: 200, time: 0.008261s
+[2025-04-11 16:56:27,333 - INFO] - Response: [
+  {
+    "name": "create",
+    "id": 19
+  },
+  {
+    "name": "want",
+    "id": 20
+  },
+  {
+    "name": "stuff",
+    "id": 21
+  }
+]
+[2025-04-11 16:56:27,385 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/19/
+[2025-04-11 16:56:27,385 - INFO] - Response status code: 200, time: 0.009459s
+[2025-04-11 16:56:27,385 - INFO] - Response: {
+  "detail": "Group deleted"
+}
+[2025-04-11 16:56:27,438 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/20/
+[2025-04-11 16:56:27,438 - INFO] - Response status code: 200, time: 0.009979s
+[2025-04-11 16:56:27,438 - INFO] - Response: {
+  "detail": "Group deleted"
+}
+[2025-04-11 16:56:27,491 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/21/
+[2025-04-11 16:56:27,491 - INFO] - Response status code: 200, time: 0.009755s
+[2025-04-11 16:56:27,491 - INFO] - Response: {
+  "detail": "Group deleted"
+}
+[2025-04-11 16:56:27,491 - INFO] - ### Cleaning teacher university data
+[2025-04-11 16:56:27,502 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:27,503 - INFO] - Response status code: 200, time: 0.008874s
+[2025-04-11 16:56:27,503 - INFO] - Response: [
+  {
+    "first_name": "Isaac Riley",
+    "last_name": "Denise Knight",
+    "subject": "Physics",
+    "id": 1
+  },
+  {
+    "first_name": "Samantha Lowe",
+    "last_name": "Robert Anderson",
+    "subject": "Physics",
+    "id": 2
+  },
+  {
+    "first_name": "Jeffrey Carroll",
+    "last_name": "Kimberly Baldwin",
+    "subject": "Mathematics",
+    "id": 3
+  },
+  {
+    "first_name": "Gwendolyn Gonzales",
+    "last_name": "Sarah House",
+    "subject": "Geography",
+    "id": 4
+  },
+  {
+    "first_name": "Sarah Hughes",
+    "last_name": "Douglas Davis",
+    "subject": "Mathematics",
+    "id": 5
+  },
+  {
+    "first_name": "Lauren Shelton",
+    "last_name": "Leah Sloan",
+    "subject": "History",
+    "id": 6
+  },
+  {
+    "first_name": "Heather Glass",
+    "last_name": "Desiree Morgan",
+    "subject": "Geography",
+    "id": 7
+  },
+  {
+    "first_name": "Christopher Williams",
+    "last_name": "Gregory Garner",
+    "subject": "Biology",
+    "id": 8
+  },
+  {
+    "first_name": "Sydney Jones",
+    "last_name": "Ronald West",
+    "subject": "Geography",
+    "id": 9
+  },
+  {
+    "first_name": "Brandy Wilson",
+    "last_name": "Adam Reynolds",
+    "subject": "Mathematics",
+    "id": 10
+  },
+  {
+    "first_name": "Michael Perez",
+    "last_name": "Frank Hogan",
+    "subject": "Mathematics",
+    "id": 11
+  },
+  {
+    "first_name": "Mary Torres",
+    "last_name": "Susan Johnson",
+    "subject": "History",
+    "id": 12
+  },
+  {
+    "first_name": "Kevin Smith",
+    "last_name": "Jason Richardson",
+    "subject": "Mathematics",
+    "id": 13
+  },
+  {
+    "first_name": "Kristy Mora",
+    "last_name": "Jennifer Crawford",
+    "subject": "Geography",
+    "id": 14
+  },
+  {
+    "first_name": "Eric Sanders",
+    "last_name": "Brian Mckee",
+    "subject": "Physics",
+    "id": 15
+  },
+  {
+    "first_name": "Joshua House",
+    "last_name": "Ronald Shaffer",
+    "subject": "Biology",
+    "id": 16
+  },
+  {
+    "first_name": "Donald Clark",
+    "last_name": "Kayla Gutierrez",
+    "subject": "Biology",
+    "id": 17
+  },
+  {
+    "first_name": "Katelyn Davila",
+    "last_name": "William Barr",
+    "subject": "Geography",
+    "id": 18
+  }
+]
+[2025-04-11 16:56:27,512 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:27,513 - INFO] - Response status code: 200, time: 0.007792s
+[2025-04-11 16:56:27,513 - INFO] - Response: [
+  {
+    "first_name": "Isaac Riley",
+    "last_name": "Denise Knight",
+    "subject": "Physics",
+    "id": 1
+  },
+  {
+    "first_name": "Samantha Lowe",
+    "last_name": "Robert Anderson",
+    "subject": "Physics",
+    "id": 2
+  },
+  {
+    "first_name": "Jeffrey Carroll",
+    "last_name": "Kimberly Baldwin",
+    "subject": "Mathematics",
+    "id": 3
+  },
+  {
+    "first_name": "Gwendolyn Gonzales",
+    "last_name": "Sarah House",
+    "subject": "Geography",
+    "id": 4
+  },
+  {
+    "first_name": "Sarah Hughes",
+    "last_name": "Douglas Davis",
+    "subject": "Mathematics",
+    "id": 5
+  },
+  {
+    "first_name": "Lauren Shelton",
+    "last_name": "Leah Sloan",
+    "subject": "History",
+    "id": 6
+  },
+  {
+    "first_name": "Heather Glass",
+    "last_name": "Desiree Morgan",
+    "subject": "Geography",
+    "id": 7
+  },
+  {
+    "first_name": "Christopher Williams",
+    "last_name": "Gregory Garner",
+    "subject": "Biology",
+    "id": 8
+  },
+  {
+    "first_name": "Sydney Jones",
+    "last_name": "Ronald West",
+    "subject": "Geography",
+    "id": 9
+  },
+  {
+    "first_name": "Brandy Wilson",
+    "last_name": "Adam Reynolds",
+    "subject": "Mathematics",
+    "id": 10
+  },
+  {
+    "first_name": "Michael Perez",
+    "last_name": "Frank Hogan",
+    "subject": "Mathematics",
+    "id": 11
+  },
+  {
+    "first_name": "Mary Torres",
+    "last_name": "Susan Johnson",
+    "subject": "History",
+    "id": 12
+  },
+  {
+    "first_name": "Kevin Smith",
+    "last_name": "Jason Richardson",
+    "subject": "Mathematics",
+    "id": 13
+  },
+  {
+    "first_name": "Kristy Mora",
+    "last_name": "Jennifer Crawford",
+    "subject": "Geography",
+    "id": 14
+  },
+  {
+    "first_name": "Eric Sanders",
+    "last_name": "Brian Mckee",
+    "subject": "Physics",
+    "id": 15
+  },
+  {
+    "first_name": "Joshua House",
+    "last_name": "Ronald Shaffer",
+    "subject": "Biology",
+    "id": 16
+  },
+  {
+    "first_name": "Donald Clark",
+    "last_name": "Kayla Gutierrez",
+    "subject": "Biology",
+    "id": 17
+  },
+  {
+    "first_name": "Katelyn Davila",
+    "last_name": "William Barr",
+    "subject": "Geography",
+    "id": 18
+  }
+]
+[2025-04-11 16:56:27,522 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/teachers/
+[2025-04-11 16:56:27,523 - INFO] - Response status code: 200, time: 0.00772s
+[2025-04-11 16:56:27,523 - INFO] - Response: [
+  {
+    "first_name": "Isaac Riley",
+    "last_name": "Denise Knight",
+    "subject": "Physics",
+    "id": 1
+  },
+  {
+    "first_name": "Samantha Lowe",
+    "last_name": "Robert Anderson",
+    "subject": "Physics",
+    "id": 2
+  },
+  {
+    "first_name": "Jeffrey Carroll",
+    "last_name": "Kimberly Baldwin",
+    "subject": "Mathematics",
+    "id": 3
+  },
+  {
+    "first_name": "Gwendolyn Gonzales",
+    "last_name": "Sarah House",
+    "subject": "Geography",
+    "id": 4
+  },
+  {
+    "first_name": "Sarah Hughes",
+    "last_name": "Douglas Davis",
+    "subject": "Mathematics",
+    "id": 5
+  },
+  {
+    "first_name": "Lauren Shelton",
+    "last_name": "Leah Sloan",
+    "subject": "History",
+    "id": 6
+  },
+  {
+    "first_name": "Heather Glass",
+    "last_name": "Desiree Morgan",
+    "subject": "Geography",
+    "id": 7
+  },
+  {
+    "first_name": "Christopher Williams",
+    "last_name": "Gregory Garner",
+    "subject": "Biology",
+    "id": 8
+  },
+  {
+    "first_name": "Sydney Jones",
+    "last_name": "Ronald West",
+    "subject": "Geography",
+    "id": 9
+  },
+  {
+    "first_name": "Brandy Wilson",
+    "last_name": "Adam Reynolds",
+    "subject": "Mathematics",
+    "id": 10
+  },
+  {
+    "first_name": "Michael Perez",
+    "last_name": "Frank Hogan",
+    "subject": "Mathematics",
+    "id": 11
+  },
+  {
+    "first_name": "Mary Torres",
+    "last_name": "Susan Johnson",
+    "subject": "History",
+    "id": 12
+  },
+  {
+    "first_name": "Kevin Smith",
+    "last_name": "Jason Richardson",
+    "subject": "Mathematics",
+    "id": 13
+  },
+  {
+    "first_name": "Kristy Mora",
+    "last_name": "Jennifer Crawford",
+    "subject": "Geography",
+    "id": 14
+  },
+  {
+    "first_name": "Eric Sanders",
+    "last_name": "Brian Mckee",
+    "subject": "Physics",
+    "id": 15
+  },
+  {
+    "first_name": "Joshua House",
+    "last_name": "Ronald Shaffer",
+    "subject": "Biology",
+    "id": 16
+  },
+  {
+    "first_name": "Donald Clark",
+    "last_name": "Kayla Gutierrez",
+    "subject": "Biology",
+    "id": 17
+  },
+  {
+    "first_name": "Katelyn Davila",
+    "last_name": "William Barr",
+    "subject": "Geography",
+    "id": 18
+  }
+]
+[2025-04-11 16:56:27,565 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/1/
+[2025-04-11 16:56:27,565 - INFO] - Response status code: 404, time: 0.000988s
+[2025-04-11 16:56:27,565 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,608 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/2/
+[2025-04-11 16:56:27,608 - INFO] - Response status code: 404, time: 0.001314s
+[2025-04-11 16:56:27,608 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,651 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/3/
+[2025-04-11 16:56:27,651 - INFO] - Response status code: 404, time: 0.001446s
+[2025-04-11 16:56:27,651 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,694 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/4/
+[2025-04-11 16:56:27,694 - INFO] - Response status code: 404, time: 0.001284s
+[2025-04-11 16:56:27,694 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,737 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/5/
+[2025-04-11 16:56:27,737 - INFO] - Response status code: 404, time: 0.001883s
+[2025-04-11 16:56:27,738 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,780 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/6/
+[2025-04-11 16:56:27,780 - INFO] - Response status code: 404, time: 0.001374s
+[2025-04-11 16:56:27,780 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,823 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/7/
+[2025-04-11 16:56:27,823 - INFO] - Response status code: 404, time: 0.001235s
+[2025-04-11 16:56:27,823 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,865 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/8/
+[2025-04-11 16:56:27,865 - INFO] - Response status code: 404, time: 0.000926s
+[2025-04-11 16:56:27,865 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,907 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/9/
+[2025-04-11 16:56:27,907 - INFO] - Response status code: 404, time: 0.00114s
+[2025-04-11 16:56:27,907 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,949 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/10/
+[2025-04-11 16:56:27,949 - INFO] - Response status code: 404, time: 0.001176s
+[2025-04-11 16:56:27,949 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:27,991 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/11/
+[2025-04-11 16:56:27,991 - INFO] - Response status code: 404, time: 0.00114s
+[2025-04-11 16:56:27,991 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,034 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/12/
+[2025-04-11 16:56:28,034 - INFO] - Response status code: 404, time: 0.001195s
+[2025-04-11 16:56:28,034 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,076 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/13/
+[2025-04-11 16:56:28,076 - INFO] - Response status code: 404, time: 0.001132s
+[2025-04-11 16:56:28,076 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,118 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/14/
+[2025-04-11 16:56:28,118 - INFO] - Response status code: 404, time: 0.001091s
+[2025-04-11 16:56:28,118 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,160 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/15/
+[2025-04-11 16:56:28,160 - INFO] - Response status code: 404, time: 0.001234s
+[2025-04-11 16:56:28,160 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,202 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/16/
+[2025-04-11 16:56:28,202 - INFO] - Response status code: 404, time: 0.000994s
+[2025-04-11 16:56:28,202 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,244 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/17/
+[2025-04-11 16:56:28,244 - INFO] - Response status code: 404, time: 0.001044s
+[2025-04-11 16:56:28,245 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,287 - INFO] - Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/%7Bself.ENDPOINT%7D/18/
+[2025-04-11 16:56:28,287 - INFO] - Response status code: 404, time: 0.00136s
+[2025-04-11 16:56:28,288 - INFO] - Response: {
+  "detail": "Not Found"
+}
+[2025-04-11 16:56:28,288 - INFO] - ### Cleaning student university data
+[2025-04-11 16:56:28,338 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/students/
+[2025-04-11 16:56:28,338 - INFO] - Response status code: 200, time: 0.008243s
+[2025-04-11 16:56:28,339 - INFO] - Response: []
+[2025-04-11 16:56:28,339 - INFO] - ### Cleaning grades university data
+[2025-04-11 16:56:28,389 - INFO] - Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, zstd' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6Im10b3JyZXMiLCJleHAiOjE3NDQzOTc3ODYsImlhdCI6MTc0NDM5MDU4Nn0.Cd-xkgMpsm1owkb5oSIgXxxTG_grBhVOS5hqgfzFqoxqz4ZHlnLECLSy0vHVd3shFhjV3sS6mKpJxDYH3QUTEjBn-0UoCio8N70wRRC8cmyk8-5TRWMYLyFAuI-5YG5r0WDNf0b2-ZCdaauIxYgJo3SuxEJuYuqw0SJCheF3XVBc2I__ZUqh0A4NGK1OaqTHKr-WPt6haAquWP-k9IYNaME2vr1B4OoPM7rL2rns4HR6I_H4ZpHee4ooFxr9SCsi-b9iXgh8mNl0dpBtoCW-hCfGwkxLfVHDhU0yCnRHczgxaYI-UQLxEiI1ee871sJ3nOMgLPqg1VPGETpeERR1HQ' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/grades/
+[2025-04-11 16:56:28,389 - INFO] - Response status code: 200, time: 0.00828s
+[2025-04-11 16:56:28,389 - INFO] - Response: []
