@@ -1,9 +1,9 @@
-from utils.session_utils import SessionUtils
-from services.auth.helpers.authentication_helper import AuthenticationHelper
-from services.auth.models.post_register_request import PostRegisterRequest
-from services.auth.models.post_register_success_response import PostRegisterSuccessResponse
-from services.auth.models.post_login_request import PostLoginRequest
-from services.auth.models.post_login_success_response import PostLoginSuccessResponse
+from test_frame.utils.session_utils import SessionUtils
+from test_frame.services.auth.helpers.authentication_helper import AuthenticationHelper
+from test_frame.services.auth.models.post_register_request import PostRegisterRequest
+from test_frame.services.auth.models.post_register_success_response import PostRegisterSuccessResponse
+from test_frame.services.auth.models.post_login_request import PostLoginRequest
+from test_frame.services.auth.models.post_login_success_response import PostLoginSuccessResponse
 
 class AuthService():
     SERVICE_URL = 'http://127.0.0.1:8000/'
