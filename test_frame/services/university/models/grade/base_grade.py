@@ -1,6 +1,6 @@
 from pydantic import field_validator
-from services.general.models.base_project import BaseProject
-from assets.constants import Constants
+from test_frame.services.general.models.base_project import BaseProject
+from test_frame.assets.constants import Constants
 
 class BaseGrade(BaseProject):   
     teacher_id: int

@@ -1,4 +1,4 @@
-from services.general.helpers.base_helper import BaseHelper
+from test_frame.services.general.helpers.base_helper import BaseHelper
 from typing import Dict
 from string import Template
 

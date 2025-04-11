@@ -1,13 +1,13 @@
 import pytest
-from services.auth.auth_service import AuthService
-from utils.session_utils import SessionUtils
+from test_frame.services.auth.auth_service import AuthService
+from test_frame.utils.session_utils import SessionUtils
 from faker import Faker
-from services.auth.models.post_register_request import PostRegisterRequest
-from services.auth.models.post_login_request import PostLoginRequest
-from services.university.uni_service import UniService
+from test_frame.services.auth.models.post_register_request import PostRegisterRequest
+from test_frame.services.auth.models.post_login_request import PostLoginRequest
+from test_frame.services.university.uni_service import UniService
 import time
 import requests
-from utils.confiig_reader import ConfigReader
+from test_frame.utils.confiig_reader import ConfigReader
 from logger.logger import Logger
 
 faker = Faker()
