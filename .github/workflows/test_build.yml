@@ -25,18 +25,22 @@ jobs:
          run: |
            ruff check .
  
-   setup_test_system:
+   setup_and_test_system:
      runs-on: ubuntu-latest          
      steps:
        - name: Checkout code
          uses: actions/checkout@v4
- 
-       - name: Set up Docker
-         uses: docker/setup-buildx-action@v2
- 
-       - name: Install dependencies for the test system
+
+       - name: Create .env file from secrets
          run: |
-           docker compose -f docker-compose.yml build
+           echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env
+           echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
+           echo "POSTGRES_DB_AUTH=${{ secrets.POSTGRES_DB_AUTH }}" >> .env
+           echo "POSTGRES_DB_UNIVERSITY=${{ secrets.POSTGRES_DB_UNIVERSITY }}" >> .env
+           echo "UNIVERSITY_SERVICE_INTERNAL_URL=${{ secrets.UNIVERSITY_SERVICE_INTERNAL_URL }}" >> .env
+           echo "UNIVERSITY_SERVICE_API_URL=${{ secrets.UNIVERSITY_SERVICE_API_URL }}" >> .env
+           echo "AUTH_SERVICE_INTERNAL_URL=${{ secrets.AUTH_SERVICE_INTERNAL_URL }}" >> .env
+           echo "AUTH_SERVICE_API_URL=${{ secrets.AUTH_SERVICE_API_URL }}" >> .env
  
        - name: Start test system with Docker Compose
          run: |
@@ -51,14 +55,16 @@ jobs:
        - name: Healthcheck
          run: bash ./healthcheck.sh
        
-       - name: Install dependencies for tests
+       - name: Build test container
+         run: docker build -f Dockerfile.tests -t test-runner .
+       
+       - name: Run tests in container
          run: |
-               python -m pip install --upgrade pip
-               pip install -r requirements.txt
-      
-       - name: Run tests
-         run: |
-           python -m pytest --alluredir=allure-results
+           docker run --rm \
+             --env-file .env \
+             --network host \
+             -v ${{ github.workspace }}/allure-results:/test_frame/allure-results \
+             test-runner
  
        - name: Save Allure test results as artifact
          uses: actions/upload-artifact@v4
@@ -68,7 +74,7 @@ jobs:
  
    generate_allure_report:
      runs-on: ubuntu-latest
-     needs: setup_test_system
+     needs: setup_and_test_system
      steps:
        - name: Download Allure Results
          uses: actions/download-artifact@v4
