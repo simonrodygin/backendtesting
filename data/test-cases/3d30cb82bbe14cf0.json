@@ -1,0 +1,220 @@
+{
+  "uid" : "3d30cb82bbe14cf0",
+  "name" : "test_grades_list_len",
+  "fullName" : "tests.e2e.test_grades.TestGrades#test_grades_list_len",
+  "historyId" : "3eedc5b4da9a517653c230a7628f9da2",
+  "time" : {
+    "start" : 1744397508801,
+    "stop" : 1744397509495,
+    "duration" : 694
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1744397503640,
+      "stop" : 1744397503641,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_readiness_check",
+    "time" : {
+      "start" : 1744397508166,
+      "stop" : 1744397508168,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_readiness_check",
+    "time" : {
+      "start" : 1744397508168,
+      "stop" : 1744397508170,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_session_utils_anon",
+    "time" : {
+      "start" : 1744397508170,
+      "stop" : 1744397508170,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "random_user_access_token",
+    "time" : {
+      "start" : 1744397508170,
+      "stop" : 1744397508800,
+      "duration" : 630
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_session_utils",
+    "time" : {
+      "start" : 1744397508800,
+      "stop" : 1744397508800,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_service",
+    "time" : {
+      "start" : 1744397508800,
+      "stop" : 1744397508801,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "clean_uni",
+    "time" : {
+      "start" : 1744397508801,
+      "stop" : 1744397508801,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f58a88bead43ebc6",
+      "name" : "log",
+      "source" : "f58a88bead43ebc6.txt",
+      "type" : "text/plain",
+      "size" : 28432
+    }, {
+      "uid" : "ae8e03f40e2f717f",
+      "name" : "stdout",
+      "source" : "ae8e03f40e2f717f.txt",
+      "type" : "text/plain",
+      "size" : 28991
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "clean_uni::0",
+    "time" : {
+      "start" : 1744397509496,
+      "stop" : 1744397510188,
+      "duration" : 692
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "grades_list"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.e2e"
+  }, {
+    "name" : "suite",
+    "value" : "test_grades"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGrades"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1660-357"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.e2e.test_grades"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "grades_list" ]
+  },
+  "source" : "3d30cb82bbe14cf0.json",
+  "parameterValues" : [ ]
+}

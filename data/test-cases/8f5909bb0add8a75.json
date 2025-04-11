@@ -1,0 +1,160 @@
+{
+  "uid" : "8f5909bb0add8a75",
+  "name" : "test_access_denied_status_code",
+  "fullName" : "tests.contract.group.test_contract_get_by_id.TestContractgetByID#test_access_denied_status_code",
+  "historyId" : "414b5ecd12aad0c92bbd22c076e4d9c9",
+  "time" : {
+    "start" : 1744397503648,
+    "stop" : 1744397503699,
+    "duration" : 51
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1744397503640,
+      "stop" : 1744397503641,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "auth_readiness_check",
+    "time" : {
+      "start" : 1744397503641,
+      "stop" : 1744397503645,
+      "duration" : 4
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_readiness_check",
+    "time" : {
+      "start" : 1744397503645,
+      "stop" : 1744397503647,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_session_utils_anon",
+    "time" : {
+      "start" : 1744397503647,
+      "stop" : 1744397503647,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "uni_service_anon",
+    "time" : {
+      "start" : 1744397503648,
+      "stop" : 1744397503648,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d3344db3c814d231",
+      "name" : "log",
+      "source" : "d3344db3c814d231.txt",
+      "type" : "text/plain",
+      "size" : 345
+    }, {
+      "uid" : "8498019ea56daa1a",
+      "name" : "stdout",
+      "source" : "8498019ea56daa1a.txt",
+      "type" : "text/plain",
+      "size" : 364
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "access_denied"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.contract.group"
+  }, {
+    "name" : "suite",
+    "value" : "test_contract_get_by_id"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestContractgetByID"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1660-357"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.contract.group.test_contract_get_by_id"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "access_denied" ]
+  },
+  "source" : "8f5909bb0add8a75.json",
+  "parameterValues" : [ ]
+}

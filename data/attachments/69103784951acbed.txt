@@ -1,0 +1,53 @@
+INFO     Logger:logger.py:28 Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=karen13&password=a%28%25gqKuiYyRlIS9Z%28jRKITGof%239v%239&password_repeat=a%28%25gqKuiYyRlIS9Z%28jRKITGof%239v%239&email=andrew01%40example.net' http://127.0.0.1:8000//auth/register/
+INFO     Logger:logger.py:28 Response status code: 201, time: 0.272739s
+INFO     Logger:logger.py:28 Response: {
+  "detail": "User registered"
+}
+INFO     Logger:logger.py:28 Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=karen13&password=a%28%25gqKuiYyRlIS9Z%28jRKITGof%239v%239' http://127.0.0.1:8000//auth/login/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.312298s
+INFO     Logger:logger.py:28 Response: {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:28 Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'Content-Length: 17' -H 'User-Agent: python-requests/2.32.3' -d '{"name":"report"}' http://127.0.0.1:8001/groups/
+INFO     Logger:logger.py:28 Response status code: 201, time: 0.010932s
+INFO     Logger:logger.py:28 Response: {
+  "name": "report",
+  "id": 2
+}
+INFO     Logger:logger.py:28 Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/2/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.008961s
+INFO     Logger:logger.py:28 Response: {
+  "name": "report",
+  "id": 2
+}
+INFO     Logger:logger.py:28 ### Cleaning group university data
+INFO     Logger:logger.py:28 Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.00852s
+INFO     Logger:logger.py:28 Response: [
+  {
+    "name": "report",
+    "id": 2
+  }
+]
+INFO     Logger:logger.py:28 Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.008423s
+INFO     Logger:logger.py:28 Response: [
+  {
+    "name": "report",
+    "id": 2
+  }
+]
+INFO     Logger:logger.py:28 Request: curl -X GET -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.008179s
+INFO     Logger:logger.py:28 Response: [
+  {
+    "name": "report",
+    "id": 2
+  }
+]
+INFO     Logger:logger.py:28 Request: curl -X DELETE -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoia2FyZW4xMyIsImV4cCI6MTc0NDQwNDcwNiwiaWF0IjoxNzQ0Mzk3NTA2fQ.d-oKPNQZuQovXCuVnBPCzxu6ylXwKj996xBOck9FzIa-U8HMofKmCmZ6P7RKJmSOmJL_jltPQ-A1xfHHJ8Del64i710hdJSn11vD5iZW4WM2_6HhrJ-Q_glrDEgwp2TWzHUehbDOLfq-ysoTz9E7fE4myYHParsYiSpapAhwLhwR0qSrcCizIYaxu6_D_RuwfAUI6bYvznfYg5Dr2b-lyrS0YKhCks6SlRdGJeA3MEPGEOr5rcLfahkOIXSljsb0RP9SasSFrnfvyijd8qDqAjSzfRIF1f-os8fVDMK7upy_hlwZ6vIZPyctgZ74VzsFzcW7lpneFnMdoJOOUp4sKw' -H 'Connection: keep-alive' -H 'Content-Length: 0' -H 'User-Agent: python-requests/2.32.3' http://127.0.0.1:8001/groups/2/
+INFO     Logger:logger.py:28 Response status code: 200, time: 0.009562s
+INFO     Logger:logger.py:28 Response: {
+  "detail": "Group deleted"
+}
