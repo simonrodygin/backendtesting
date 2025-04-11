@@ -40,9 +40,6 @@ jobs:
          with:
            name: docker-compose-logs
            path: ./docker-compose.yml
-
-       - name: healthcheck
-         run: bash ./healthcheck.sh
        
        - name: Healthcheck
          run: bash ./healthcheck.sh
