@@ -40,6 +40,11 @@ jobs:
          with:
            name: docker-compose-logs
            path: ./docker-compose.yml
+
+       - name: healthcheck
+         run: |
+               curl "http://127.0.0.1:8000/docs#/"
+               curl "http://127.0.0.1:8001/docs#/"
        
        - name: Healthcheck
          run: bash ./healthcheck.sh
