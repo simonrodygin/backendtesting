@@ -25,18 +25,11 @@ jobs:
          run: |
            ruff check .
  
-   setup_test_system:
+   setup_and_test_system:
      runs-on: ubuntu-latest          
      steps:
        - name: Checkout code
          uses: actions/checkout@v4
- 
-       - name: Set up Docker
-         uses: docker/setup-buildx-action@v2
- 
-       - name: Install dependencies for the test system
-         run: |
-           docker compose -f docker-compose.yml build
  
        - name: Start test system with Docker Compose
          run: |
@@ -47,6 +40,11 @@ jobs:
          with:
            name: docker-compose-logs
            path: ./docker-compose.yml
+
+       - name: healthcheck
+         run: |
+               curl "http://127.0.0.1:8000/docs#/"
+               curl "http://127.0.0.1:8001/docs#/"
        
        - name: Install dependencies for tests
          run: |
@@ -56,11 +54,6 @@ jobs:
        - name: Run tests
          run: |
            python -m pytest --alluredir=allure-results
-
-       - name: healthcheck
-         run: |
-               curl "http://127.0.0.1:8000/docs#/"
-               curl "http://127.0.0.1:8001/docs#/"
  
        - name: Save Allure test results as artifact
          uses: actions/upload-artifact@v4
@@ -70,7 +63,7 @@ jobs:
  
    generate_allure_report:
      runs-on: ubuntu-latest
-     needs: setup_test_system
+     needs: setup_and_test_system
      steps:
        - name: Download Allure Results
          uses: actions/download-artifact@v4
