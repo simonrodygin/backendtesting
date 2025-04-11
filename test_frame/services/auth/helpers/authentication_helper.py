@@ -1,4 +1,4 @@
-from test_frame.services.general.helpers.base_helper import BaseHelper
+from services.general.helpers.base_helper import BaseHelper
 
 
 class AuthenticationHelper(BaseHelper):

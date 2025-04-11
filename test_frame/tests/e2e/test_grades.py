@@ -1,7 +1,7 @@
 import statistics
 from logger.logger import Logger
-from test_frame.services.university.models.grade.get_grades_response_success import GetGradesResponseSuccess
-from test_frame.services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
+from services.university.models.grade.get_grades_response_success import GetGradesResponseSuccess
+from services.university.models.grade.get_grades_stats_response_success import GetGradesStatsResponseSuccess
 from faker import Faker
 import pytest
 

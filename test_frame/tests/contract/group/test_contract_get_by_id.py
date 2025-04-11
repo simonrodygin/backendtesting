@@ -1,5 +1,5 @@
-from test_frame.services.university.models.group.get_group_fail import GetGroupFail
-from test_frame.services.university.models.group.get_group_success import GetGroupSuccess
+from services.university.models.group.get_group_fail import GetGroupFail
+from services.university.models.group.get_group_success import GetGroupSuccess
 import pytest
 
 class TestContractgetByID:

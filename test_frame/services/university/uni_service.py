@@ -1,24 +1,24 @@
-from test_frame.utils.session_utils import SessionUtils
-from test_frame.services.university.helpers.student_helper import StudentHelper
-from test_frame.services.university.helpers.group_helper import GroupHelper
-from test_frame.services.university.helpers.teacher_helper import TeacherHelper
-from test_frame.services.university.helpers.grade_helper import GradeHelper
-from test_frame.services.university.models.student.post_student_request import PostStudentRequest
-from test_frame.services.university.models.student.post_student_response_success import PostStudentResponseSuccess
-from test_frame.services.university.models.group.post_group_request import PostGroupRequest
-from test_frame.services.university.models.teacher.post_teacher_request import PostTeacherRequest
-from test_frame.services.university.models.grade.post_grade_request import PostGradeRequest
-from test_frame.services.university.models.grade.post_grade_response_success import PostGradeResponseSuccess
-from test_frame.services.university.models.teacher.post_teacher_response_success import PostTeacherResponseSuccess
+from utils.session_utils import SessionUtils
+from services.university.helpers.student_helper import StudentHelper
+from services.university.helpers.group_helper import GroupHelper
+from services.university.helpers.teacher_helper import TeacherHelper
+from services.university.helpers.grade_helper import GradeHelper
+from services.university.models.student.post_student_request import PostStudentRequest
+from services.university.models.student.post_student_response_success import PostStudentResponseSuccess
+from services.university.models.group.post_group_request import PostGroupRequest
+from services.university.models.teacher.post_teacher_request import PostTeacherRequest
+from services.university.models.grade.post_grade_request import PostGradeRequest
+from services.university.models.grade.post_grade_response_success import PostGradeResponseSuccess
+from services.university.models.teacher.post_teacher_response_success import PostTeacherResponseSuccess
 from faker import Faker
 import random
-from test_frame.services.university.models.degree_enum import DegreeEnum
-from test_frame.services.university.models.subject_enum import SubjectEnum
-from test_frame.services.university.models.group.post_group_response_success import PostGroupResponseSuccess
+from services.university.models.degree_enum import DegreeEnum
+from services.university.models.subject_enum import SubjectEnum
+from services.university.models.group.post_group_response_success import PostGroupResponseSuccess
 import string
 from logger.logger import Logger
-from test_frame.utils.confiig_reader import ConfigReader
-from test_frame.test_frame.assets.constants import Constants
+from utils.confiig_reader import ConfigReader
+from assets.constants import Constants
 
 faker = Faker()
 config_reader = ConfigReader()

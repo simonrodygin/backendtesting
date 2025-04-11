@@ -1,4 +1,4 @@
-from test_frame.utils.session_utils import SessionUtils
+from utils.session_utils import SessionUtils
 
 class BaseHelper:
     ENDPOINT: str
